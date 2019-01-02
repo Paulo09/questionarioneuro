@@ -1,0 +1,384 @@
+
+
+<html>
+    <head>       
+		 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+	     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		 
+		 <!--Materilize embarcado-->
+	      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	      <!--Import materialize.css-->
+	      <link type="text/css" rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.min.css')}" media="screen,projection"/>
+	      <!--Let browser know website is optimized for mobile-->
+	      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
+		  <!--Materilize embarcado-->
+
+           <!-- created by OSTON CODE CYPHER -->
+    <!--Support/subscribe my channel @ youtube.com/ostoncodecypher -->
+      <title>Register</title>
+      <meta name="viewport" content="width=device-width,initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+     <style>
+       body{
+         background-color:teal;
+       }
+     
+       .progress{
+         width:50%;
+         margin:0 auto;
+         margin-top:20%;
+       }
+       
+       @media only screen and (max-width:924px){
+            .progress{
+               width:70%;
+               margin:0 auto;
+               margin-top:60%;
+             }
+       }
+    
+     </style>
+		
+        <title>Cadastrar Usuario</title>         
+    </head>
+	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+		<div class="nav-content">
+		  <ul class="tabs tabs-transparent">
+			<li class="tab"><a href="#test1">Sair</a></li>
+			<li class="tab"><a class="active" href="#test2">Menu</a></li>
+			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+		  </ul>
+		</div>
+	</nav>
+	<body class="teal lighten-2">   
+	<div class="container" style="margin-top:40px;">
+    <body style="background-image:url(${createLinkTo(dir:'images/view/create/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+        <!--<div class="card">
+		  <div class="card-image">
+		  <img src="${createLinkTo(dir:'images/view/create/backgroundCard',file:'backgroundCard.jpg')}">
+		  <span class="card-title"><b>C</b>adastrar <b>Usuario</b></span>
+		</div>-->
+        <div class="body">
+            <g:if test="${flash.message}">
+				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+            </g:if>
+            <g:hasErrors bean="${usuario}">
+            <div class="errors">
+                <g:renderErrors bean="${usuario}" as="list" />
+            </div>
+            </g:hasErrors>
+            <g:form action="save" method="post" >
+                <div class="dialog">
+                   
+                </div>
+                
+
+               <div class="row">
+                <div class="col s5 m4">
+                <div class="card">
+                    <div class="card-image">
+                    <img src="${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')}">
+                    <span class="card-title">Formulário 1</span>
+                    </div>
+                    <div class="card-content">
+                    <p> Perguntas de 1 a 5 - Questionário EGG</p>
+                    </div>
+                    <div class="card-action">
+                    <a href="#formulario1" class="modal-trigger">Formulario 1</a>
+                    </div>
+                </div>
+                </div>
+
+                 <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                    <img src="${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')}">
+                    <span class="card-title">Formulário 2</span>
+                    </div>
+                    <div class="card-content">
+                    <p> Perguntas de 5 a 10 - Questionário EGG</p>
+                    </div>
+                    <div class="card-action">
+                   
+                     <a href="#formulario2" class="modal-trigger">Formulario 2</a>
+                     <a href="#formulario2" class="btn btn-large teal modal-trigger">Formulario 2</a>
+                    
+                    </div>
+                </div>
+                </div>
+            </div>
+
+             <div class="row">
+               
+            </div>
+
+
+
+             <div class="card">
+    <div class="card-content">
+      <p>I am a very simple card. I am good at containing small bits of information. I am convenient because I require little markup to use effectively.</p>
+    </div>
+    <div class="card-tabs">
+      <ul class="tabs tabs-fixed-width">
+        <li class="tab"><a href="#test4">Test 1</a></li>
+        <li class="tab"><a href="#test5">Test 2</a></li>
+        <li class="tab"><a href="#test6">Test 3</a></li>
+      </ul>
+    </div>
+    <div class="card-content grey lighten-4">
+      <div id="test4">
+                  <form action="" method="POST">
+                        <div class="modal-conent">
+                        <div class="container">
+                                <h5 class="center">Login</h5>
+                            <p class="center">Formulario 1</p>
+
+
+                
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'nome','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="validate" required size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:usuario,field:'nome')}"/>
+                                                <label for="nome"><font size="3"><b>Nome</b></font></label>
+                                            </td>
+                                        </tr>
+
+                             <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'login','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite login " id="login" name="login" size="50" value="${fieldValue(bean:usuario,field:'login')}"/>
+									<label for="login"><font size="3"><b>Login</b></font></label>
+                                </td>
+                            </tr>              
+                            
+                            
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'senha','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite senha " id="senha" name="senha" size="50" value="${fieldValue(bean:usuario,field:'senha')}"/>
+                                                <label for="senha"><font size="3"><b>Senha</b></font></label>
+                                            </td>
+                                        </tr> 
+
+                          
+                                </div>
+                                
+                            </div>
+                             
+                             <div class="buttons" align="center">
+                                <span class="button"><input type="button"  value="close" class="btn modal-close red"/></span>
+                             </div><br>
+                             
+            <!-- Fim Formulario 1 -->
+      </div>
+      <div id="test5">
+
+             <div class="col s12 m4">
+                <div class="card">
+                    <div class="card-image">
+                    <img src="${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')}">
+                    <span class="card-title">Formulário 2</span>
+                    </div>
+                    <div class="card-content">
+                    <p> Perguntas de 5 a 10 - Questionário EGG</p>
+                    </div>
+                    <div class="card-action">
+                   
+                     <a href="#formulario2" class="modal-trigger">Formulario 2</a>
+                     <a href="#formulario2" class="btn btn-large teal modal-trigger">Formulario 2</a>
+                    
+                    </div>
+                </div>
+                </div>
+            </div>
+
+      </div>
+      <div id="test6">
+
+          
+                    <form action="" method="POST">
+                        <div class="modal-conent">
+                        <div class="container">
+                                <h5 class="center">Login</h5>
+                            <p class="center">Formulario 1</p>
+
+
+                
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'nome','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="validate" required size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:usuario,field:'nome')}"/>
+                                                <label for="nome"><font size="3"><b>Nome</b></font></label>
+                                            </td>
+                                        </tr>
+
+                             <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'login','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite login " id="login" name="login" size="50" value="${fieldValue(bean:usuario,field:'login')}"/>
+									<label for="login"><font size="3"><b>Login</b></font></label>
+                                </td>
+                            </tr>              
+                            
+                            
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'senha','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite senha " id="senha" name="senha" size="50" value="${fieldValue(bean:usuario,field:'senha')}"/>
+                                                <label for="senha"><font size="3"><b>Senha</b></font></label>
+                                            </td>
+                                        </tr> 
+
+                          
+                                </div>
+                                
+                            </div>
+                             
+                             <div class="buttons" align="center">
+                                <span class="button"><input type="button"  value="close" class="btn modal-close red"/></span>
+                             </div><br>
+                             
+            <!-- Fim Formulario 1 -->
+            
+      </div>
+    </div>
+  </div>
+               
+
+                
+              
+
+                
+
+
+                <!-- Início Formulario 1 -->
+                 <div class="modal modal-fixed-footer" id="formulario1">
+                    <form action="" method="POST">
+                        <div class="modal-conent">
+                        <div class="container">
+                                <h5 class="center">Login</h5>
+                            <p class="center">Formulario 1</p>
+
+
+                
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'nome','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="validate" required size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:usuario,field:'nome')}"/>
+                                                <label for="nome"><font size="3"><b>Nome</b></font></label>
+                                            </td>
+                                        </tr>
+
+                             <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'login','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite login " id="login" name="login" size="50" value="${fieldValue(bean:usuario,field:'login')}"/>
+									<label for="login"><font size="3"><b>Login</b></font></label>
+                                </td>
+                            </tr>              
+                            
+                            
+
+                            <tr class="prop">
+                                            <td valign="top" class="name"></td>
+                                            <td valign="top" class="value ${hasErrors(bean:usuario,field:'senha','errors')}">
+                                                <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite senha " id="senha" name="senha" size="50" value="${fieldValue(bean:usuario,field:'senha')}"/>
+                                                <label for="senha"><font size="3"><b>Senha</b></font></label>
+                                            </td>
+                                        </tr> 
+
+                          
+                                </div>
+                                
+                            </div>
+                             
+                             <div class="buttons" align="center">
+                                <span class="button"><input type="button"  value="close" class="btn modal-close red"/></span>
+                             </div><br>
+                             
+              </div><!-- Fim Formulario 1 -->
+
+                <!-- Início Formulario 2 -->
+                 <div class="modal modal-fixed-footer" id="formulario2">
+                   
+                        <div class="modal-conent">
+                        <div class="container">
+                                <h5 class="center">Login</h5>
+                        <p class="center">Formulário 2</p>
+
+
+                         <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'permissao','errors')}">
+                                    <i class="fa fa-list"></i><g:select id="permissao" name="permissao" from="${usuario.constraints.permissao.inList}" value="${usuario.permissao}" ></g:select>
+									<label for="permissao"><font size="3"><b>Permissao</b></font></label>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'email','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite email " id="email" name="email" size="50" value="${fieldValue(bean:usuario,field:'email')}"/>
+									<label for="email"><font size="3"><b>Email</b></font></label>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop" ${objInput}>
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:usuario,field:'foneCelular','errors')}">
+                                    <i class="fa fa-mobile-phone"></i><input type="tel" placeholder="Digite foneCelular " class="form-control" id="foneCelular" name="foneCelular"  class="form-control" onkeypress="return txtBoxFormat(this, '(99)9-9999-9999', event);" maxlength="15" size="50" value="${fieldValue(bean:usuario,field:'foneCelular')}"/>
+									<label for="foneCelular"><font size="3"><b>Fone Celular</b></font></label>
+                                </td>
+                            </tr> 
+                           
+                          
+                        
+                        <div class="buttons" align="center">
+                            <span class="button"><input  class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/>
+                            <span class="button"><input type="button"  value="Sair" class="btn modal-close btn-large red"/></span>
+                        </div><br>
+                                
+                            </div>
+              </div><!-- Fim Formulario 2 -->
+            </div>
+
+	          
+            </g:form>
+        </div>
+		   <!--Import jQuery before materialize.js-->
+	       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	       <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>
+		   <script>
+			  $('.datepicker').pickadate({format: 'dd/mm/yy',selectMonths: true,selectYears: 15,today: 'Hoje',clear: 'Limpar',close:'Ok',closeOnSelect: false});
+			  $(document).ready(function() {$('select').material_select();});
+		   </script>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+    
+      const login = document.querySelectorAll(".modal");
+      M.Modal.init(login,{
+        opacity:0.7,
+        dismissible:false
+      });
+      
+      document.querySelector("#content").style.display="none";
+      document.querySelector("#flayer").classList.add("progress");
+      document.querySelector("#slayer").classList.add("indeterminate");
+      
+      setTimeout(function(){
+          document.querySelector("#flayer").classList.remove("progress");
+          document.querySelector("#slayer").classList.remove("indeterminate");
+          document.querySelector("#content").style.display="block";
+      },3000)
+    </script>
+
+    </body>
+</html>
