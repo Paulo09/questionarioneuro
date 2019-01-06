@@ -14,70 +14,72 @@
    	      <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
 		  
-        <title>Dados Responsaveltecnica</title>
+        <title>Dados Interfaceutilizada</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
+	<nav class="nav-extended btn waves-effect waves-light teal lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
-			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
-			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
+			<li class="tab"><a href="#test1">Sair</a></li>
+			<li class="tab"><a class="active" href="#test2">Menu</a></li>
+			<li class="tab disabled"><a href="#test3">Buscar</a></li>
 		  </ul>
 		</div>
 	</nav>
 	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
     <body>
-        <div class="card grey lighten-4 z-depth-5"><div class="card-image"></div>		
+        <div class="card z-depth-5"><div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light blue lighten-2 z-depth-5">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
             <div class="dialog">
                 <table class="striped left grey lighten-2">
                     <tbody>
 
-                        <div class="card-content yellow lighten-1">
-                                <h4 align="center" class="blue-text">Dados Responsável Técnico</h4>
+                         <div class="card-content teal lighten-2">
+                                <h4 align="center" class="white-text">Interface Utilizada</h4>
                         </div>
 
                     
                         <tr class="prop">
                             <td valign="top" class="name"><b>Id:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:responsaveltecnica, field:'id')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:interfaceutilizada, field:'id')}</td>
                             
                         </tr>
 
-                         <tr class="prop">
+                        <tr class="prop">
                             <td valign="top" class="name"><b>Nome:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:responsaveltecnica, field:'nome')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:interfaceutilizada, field:'nome')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Coren:</td>
+                            <td valign="top" class="name"><b>Descrição:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:responsaveltecnica, field:'coren')}</td>
+                            <td valign="top" class="value">${fieldValue(bean:interfaceutilizada, field:'descricao')}</td>
+                            
+                        </tr>
+
+                        <tr class="prop">
+                            <td valign="top" class="name"><b>Data Cadastro:</td>
+                            
+                            <td valign="top" class="value">${String.format('%td/%<tm/%<tY',interfaceutilizada?.cadastro)}</td>
                             
                         </tr>
                     
-                        <tr class="prop">
-                            <td valign="top" class="name"><b>Observação:</td>
-                            
-                            <td valign="top" class="value">${fieldValue(bean:responsaveltecnica, field:'observacao')}</td>
-                            
-                        </tr>
+                        
                     
                     </tbody>
                 </table>
             </div>
             <div class="buttons" align="center"><br>
                 <g:form>
-                    <input type="hidden" name="id" value="${responsaveltecnica?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
+                    <input type="hidden" name="id" value="${interfaceutilizada?.id}" />
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

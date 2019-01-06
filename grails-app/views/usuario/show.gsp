@@ -31,7 +31,7 @@
         <div class="card grey lighten-2" >
 		  <div class="card-image">
 		</div>		
-        <div class="body">
+        <div class="body z-depth-5">
             <g:if test="${flash.message}">
 				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/message',file:'message.jpg')});">${flash.message}</nav>
             </g:if>

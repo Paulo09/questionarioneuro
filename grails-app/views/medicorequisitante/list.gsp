@@ -44,7 +44,7 @@
 	<div class="body">
 	<body class="white lighten-2">    
    	
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+    <body>
         <div class="card"><div class="card-image"></div>
         <div class="body">
              <g:if test="${flash.message}">

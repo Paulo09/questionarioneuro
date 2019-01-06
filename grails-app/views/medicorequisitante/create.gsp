@@ -16,19 +16,19 @@
 		
         <title>Cadastrar Medicorequisitante</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
+			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
+			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
     <body>
-        <div class="card">
+        <div class="card grey lighten-4 z-depth-5">
 		<div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
@@ -41,8 +41,20 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
                 <div class="dialog">
-                    <table>
+                    <table class="striped left grey lighten-2">
                         <tbody>
+
+                           <div class="card-content yellow lighten-1">
+                                <h4 align="center" class="white-text"><font color="#2196f3">Cadastrar Médico Requisitante</h4>
+                            </div>
+
+                             <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:medicorequisitante,field:'nome','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:medicorequisitante,field:'nome')}"/>
+									<label for="nome"><font size="3"><b>Nome</b></font></label>
+                                </td>
+                            </tr>
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
@@ -52,27 +64,19 @@
                                 </td>
                             </tr> 
                         
-                            <tr class="prop">
+                            <tr class="prop" style="display:none">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:medicorequisitante,field:'dtCadastro','errors')}">
                                     <input name="dtCadastro" class="form-control" data-clear-btn-text="Limpar Dt Cadastro"  data-clear-btn="true" value="${String.format('%td/%<tm/%<tY',medicorequisitante?.dtCadastro)}" ></input>
 									<label for="dtCadastro"><font size="3"><b>Dt Cadastro</b></font></label>
                                 </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:medicorequisitante,field:'nome','errors')}">
-                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:medicorequisitante,field:'nome')}"/>
-									<label for="nome"><font size="3"><b>Nome</b></font></label>
-                                </td>
-                            </tr> 
+                            </tr>
                         
                         </tbody>
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light " style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light  blue" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

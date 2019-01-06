@@ -26,7 +26,7 @@
 	</nav>
 	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/edit/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+    <body>
         <div class="card  grey lighten-4"><div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
@@ -49,7 +49,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="paisParentes">Pais Parentes:</label>
+                                    <label for="paisParentes"></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'paisParentes','errors')}">
                                     <i class="fa fa-list"></i><g:select id="paisParentes" name="paisParentes" from="${questionariovideoeeg.constraints.paisParentes.inList}" value="${questionariovideoeeg.paisParentes}" ></g:select>

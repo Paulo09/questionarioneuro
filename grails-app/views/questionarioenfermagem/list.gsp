@@ -15,7 +15,7 @@
 	  <!--Materilize embarcado-->
         <title>Lista Questionarioenfermagem</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -24,17 +24,24 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">    
+	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>L</b>ista <b>Questionarioenfermagem</b></span>
-		</div>
+    <body>
+
+	    <g:form action="buscar" method="post" class="medicorequisitante">
+			<div class="list">
+				<div class="input-field col s8 ">
+				<input type="text" placeholder="Buscar: Questionario Enfermagem" id="nome" name="nome" ><br/>
+			</div>
+			<div class="buttons" align="center">
+				<span class="button"><input  class="red lighten-2 btn waves-effect waves-light" type="submit" style="padding:10px;margin:10px;size:30px;width:110px;" value="Buscar"/></span>
+			</div><br>
+		</g:form>
+
+        <div class="card z-depth-5"><div class="card-image"></div>
         <div class="body">
-             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+			<g:if test="!${flash.message}">
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2">${flash.message}</nav>
             </g:if>
             <div class="list">
                 <table class="striped centered grey lighten-2">
@@ -76,8 +83,8 @@
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
-				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Questionarioenfermagem.count()}"/></ul>
+			<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
+				 <ul class="pagination" align="center"><li class="active red lighten-2"><g:paginate total="${Questionarioenfermagem.count()}"/></ul>
             </nav>
         </div>
 		   <!--Import jQuery before materialize.js-->

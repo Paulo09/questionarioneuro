@@ -16,7 +16,7 @@
 		  
         <title>Dados Questionariovideoeeg</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -28,10 +28,10 @@
 	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
     <body>
-        <div class="card"><div class="card-image"></div>		
+        <div class="card z-depth-5"><div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light yellow lighten-2">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light yellow lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="dialog">
                 <table class="striped left grey lighten-2">

@@ -46,7 +46,7 @@
                         <tbody>
 
                             <div class="card-content blue lighten-2">
-                                <h4 align="center" class="white-text">Editar Usuário</h4>
+                                <h4 align="center" class="white-text">Editar Usuário: ${usuario.nome}</h4>
                             </div>
 
                               <tr class="prop">

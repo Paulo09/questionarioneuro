@@ -15,7 +15,7 @@
 	  <!--Materilize embarcado-->
         <title>Lista Responsaveltecnica</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -24,17 +24,14 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">    
+	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+    <body>
         <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>L</b>ista <b>Responsaveltecnica</b></span>
-		</div>
+		  <div class="card-image"></div>
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light blue lighten-1">${flash.message}</nav>
             </g:if>
             <div class="list">
                 <table class="striped centered grey lighten-2">
@@ -43,7 +40,11 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
+                   	        <g:sortableColumn property="coren" title="Coren" />
+                        
                    	        <g:sortableColumn property="nome" title="Nome" />
+                        
+                   	        <g:sortableColumn property="observacao" title="Observacao" />
                         
                         </tr>
                     </thead>
@@ -53,14 +54,18 @@
                         
                             <td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'id')}</g:link></td>
                         
+                            <td>${fieldValue(bean:responsaveltecnica, field:'coren')}</td>
+                        
                             <td>${fieldValue(bean:responsaveltecnica, field:'nome')}</td>
+                        
+                            <td>${fieldValue(bean:responsaveltecnica, field:'observacao')}</td>
                         
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
+			<nav class="nav-extended btn waves-effect waves-light yellow lighten-1" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
 				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Responsaveltecnica.count()}"/></ul>
             </nav>
         </div>

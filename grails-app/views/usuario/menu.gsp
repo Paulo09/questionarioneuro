@@ -97,8 +97,7 @@
 		<li><a class="collapsible-header waves-effect waves-teal active" href="usuario/${usuario.id}" target="_self"><i class="material-icons">cloud</i>${usuario}</a></li>
 		<li><div class="divider"></div></li>
 		<li><a class="collapsible-header waves-effect waves-teal active" href="#!"><i class="material-icons">face</i>Editar Dados Usuário</a></li>
-		<li><div class="divider"></div></li>
-		
+		<li><div class="divider"></div></li>		
 		<div class="row">
 			<div class="input-field col s9">
 			  <i class="material-icons prefix">search</i>
@@ -118,7 +117,7 @@
         <div class="demo-blog__posts mdl-grid">
 
 
-				<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariovideoeeg.jpg);" >
 				<a href="/teste/questionariovideoeeg">
 				</div>
@@ -130,7 +129,7 @@
 					</div>
 				</a>
 
-				<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionarioenfermagem.jpg);" >
 				<a href="/teste/questionarioenfermagem">
 				</div>
@@ -142,7 +141,7 @@
 					</div>
 				</a>
 
-					<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+					<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopossono.jpg);" >
 				<a href="/teste/questionariopossono">
 				</div>
@@ -157,7 +156,7 @@
 
 			
 
-		  <div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+		  <div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/cadastrar.jpg);" >
 			<a href="/teste/usuario">
 			</div>
@@ -169,19 +168,19 @@
 				</div>
 			</a>
 
-			<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
-			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/medicoResponsavel.jpg);" >
+			<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/exame.jpg);" >
 			<a href="/teste/medicoresponsavel">
 			</div>
 				<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--yellow-600" >
 					  <div>
-						<strong><b>Médico Responsável</b></strong>
+						<strong><b>Exames</b></strong>
 					  </div>
 					</div>
 				</div>
 			</a>
 
-			<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+			<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/quarto.jpg);" >
 			<a href="/teste/quarto">
 			</div>
@@ -193,7 +192,7 @@
 				</div>
 			</a>
 
-			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/medicoRequisitante.jpg);" >
 			<a href="/teste/medicorequisitante">
 			</div>
@@ -206,7 +205,7 @@
 			</a>				
 			
 
-			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/enfermagem.jpg);" >
 			<a href="/teste/responsaveltecnica">
 			</div>
@@ -219,19 +218,19 @@
 			</a>
 
 
-			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
-			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/exame.jpg);" >
-			<a href="/teste/exame">
+			<div class="yellow mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/medicoResponsavel.jpg);" >
+			<a href="/teste/medicoresponsavel">
 			</div>
 				<div class="mdl-card__supporting-text meta meta--fill mdl-color-text--blue-600" >
 					  <div>
-						<strong><b>Exames</b></strong>
+						<strong><b>Médico Responsável</b></strong>
 					  </div>
 					</div>
 				</div>
 			</a>
 
-				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 					<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/convenio.jpg);" >
 					<a href="/teste/convenio">
 					</div>
@@ -245,7 +244,7 @@
 
 
 				
-				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/paciente.jpg);" >
 			<a href="/teste/paciente">
 			</div>
@@ -259,7 +258,7 @@
 
 
 				
-				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="blue mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/usuario.jpg);" >
 				<a href="/teste/usuario">
 				</div>
@@ -271,7 +270,7 @@
 					</div>
 				</a>
 
-				<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariovideoeeg.jpg);" >
 				<a href="/teste/questionariovideoeeg">
 				</div>
@@ -283,7 +282,7 @@
 					</div>
 				</a>
 
-				<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+				<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionarioenfermagem.jpg);" >
 				<a href="/teste/questionarioenfermagem">
 				</div>
@@ -295,7 +294,7 @@
 					</div>
 				</a>
 
-					<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop" >
+					<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopossono.jpg);" >
 				<a href="/teste/questionariopossono">
 				</div>

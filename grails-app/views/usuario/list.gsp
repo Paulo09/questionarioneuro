@@ -30,7 +30,7 @@
        
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
         </g:if>
 			
 			<g:form action="buscar" method="post" class="usuario">

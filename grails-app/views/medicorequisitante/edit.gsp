@@ -27,7 +27,7 @@
 	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
     <body>
-        <div class="card z-depth-5">
+        <div class="card grey lighten-4 z-depth-5">
 		  <div class="card-image"></div>
         <div class="body card grey lighten-4">
             <g:if test="${flash.message}">
@@ -45,7 +45,7 @@
                        <table class="striped left grey lighten-2">
                         <tbody>
 
-                             <div class="card-content yellow lighten-2">
+                            <div class="card-content yellow lighten-2">
                                 <h4 align="center" class="white-text"><font color="#2196f3">Cadastrar Dados Paciente</font></h4>
                             </div>
 

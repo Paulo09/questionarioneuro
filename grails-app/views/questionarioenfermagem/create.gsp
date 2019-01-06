@@ -14,28 +14,24 @@
 		  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
 		
-        <title>Cadastrar Questionarioenfermagem</title>         
+        <title>Cadastrar Questionário Enfermagem</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
 		<div class="nav-content">
-		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
-		  </ul>
+		 <ul class="tabs tabs-transparent">
+            <li class="tab"><a href="list" target="_self">Voltar</a></li>
+            <li class="tab  disabled"><a class="active">Novo</a></li>
+        </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/create/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/create/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>C</b>adastrar <b>Questionarioenfermagem</b></span>
-		</div>
+    <body>
+        <div class="card z-depth-5"><div class="card-image z-depth-5"></div>
+        <div class="card grey lighten-4 z-depth-5">
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${questionarioenfermagem}">
             <div class="errors">
@@ -44,30 +40,34 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
                 <div class="dialog">
-                    <table>
+                    <table class="striped left grey lighten-2">
                         <tbody>
+
+                           <div class="card-content red lighten-2">
+                                <h4 align="center" class="white-text">Cadastrar Questionário Enfermagem</h4>
+                            </div>
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'tipoAssistenciaEnfermagem','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="tipoAssistenciaEnfermagem" name="tipoAssistenciaEnfermagem" from="${questionarioenfermagem.constraints.tipoAssistenciaEnfermagem.inList}" value="${questionarioenfermagem.tipoAssistenciaEnfermagem}" ></g:select>
-									<label for="tipoAssistenciaEnfermagem"><font size="3"><b>Tipo Assistencia Enfermagem</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="tipoAssistenciaEnfermagem" name="tipoAssistenciaEnfermagem" from="${questionarioenfermagem.constraints.tipoAssistenciaEnfermagem.inList}" value="${questionarioenfermagem.tipoAssistenciaEnfermagem}" noSelection="['':'- Tipo Assistencia Enfermagem -']" ></g:select>
+									<label for="tipoAssistenciaEnfermagem"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'posicaoColeta','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="posicaoColeta" name="posicaoColeta" from="${questionarioenfermagem.constraints.posicaoColeta.inList}" value="${questionarioenfermagem.posicaoColeta}" ></g:select>
-									<label for="posicaoColeta"><font size="3"><b>Posicao Coleta</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="posicaoColeta" name="posicaoColeta" from="${questionarioenfermagem.constraints.posicaoColeta.inList}" value="${questionarioenfermagem.posicaoColeta}" noSelection="['':'- Posição Coleta -']" ></g:select>
+									<label for="posicaoColeta"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'roncoColeta','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="roncoColeta" name="roncoColeta" from="${questionarioenfermagem.constraints.roncoColeta.inList}" value="${questionarioenfermagem.roncoColeta}" ></g:select>
-									<label for="roncoColeta"><font size="3"><b>Ronco Coleta</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="roncoColeta" name="roncoColeta" from="${questionarioenfermagem.constraints.roncoColeta.inList}" value="${questionarioenfermagem.roncoColeta}" noSelection="['':'- Ronco Coleta -']" ></g:select>
+									<label for="roncoColeta"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
@@ -155,7 +155,7 @@
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

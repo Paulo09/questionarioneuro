@@ -15,26 +15,23 @@
 		  <!--Materilize embarcado-->
         <title>Editar Dados Medicoresponsavel</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
+			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
+			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/edit/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/edit/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>E</b>ditar Dados <b>Medicoresponsavel</b></span>
-		</div>
+    <body>
+        <div class="card"><div class="card-image"></div>
+        <div class="card grey lighten-4">
         <div class="body">
             <g:if test="${flash.message}">
-	            <nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/message',file:'message.jpg')});">${flash.message}</nav>
+	            <nav class="nav-extended btn waves-effect waves-light blue lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${medicoresponsavel}">
             <div class="errors">
@@ -44,19 +41,42 @@
             <g:form method="post" >
                 <input type="hidden" name="id" value="${medicoresponsavel?.id}" />
                 <div class="dialog">
-                    <table>
+                   <table class="striped left grey lighten-2">
                         <tbody>
                         
-                            <tr class="prop">
+                            <div class="card-content yellow lighten-1">
+                                <h4 align="center" class="white-text"><font color="#2196f3">Editar Médico: ${medicoresponsavel?.nome}</font></h4>
+                            </div>
+
+                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="crm">Crm:</label>
+                                    <label for="nome"></label>
                                 </td>
-                                <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'crm','errors')}">
-                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite crm " id="crm" name="crm" size="50" value="${fieldValue(bean:medicoresponsavel,field:'crm')}"/>
+                                <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'nome','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:medicoresponsavel,field:'nome')}"/>
+                                    <label for="permissao"><font size="3"><b>Nome</b></font></label>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="crm"></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'crm','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite crm " id="crm" name="crm" size="50" value="${fieldValue(bean:medicoresponsavel,field:'crm')}"/>
+                                    <label for="permissao"><font size="3"><b>Crm</b></font></label>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'observacao','errors')}">
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite Observação " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:medicoresponsavel,field:'observacao')}"/>
+									<label for="observacao"><font size="3"><b>Observação</b></font></label>
+                                </td>
+                            </tr>  
+                        
+                            <tr class="prop" style="display:none">
                                 <td valign="top" class="name">
                                     <label for="dtCadastro">Dt Cadastro:</label>
                                 </td>
@@ -65,21 +85,14 @@
                                 </td>
                             </tr> 
                         
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="nome">Nome:</label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'nome','errors')}">
-                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:medicoresponsavel,field:'nome')}"/>
-                                </td>
-                            </tr> 
+                           
                         
                         </tbody>
                     </table>
                 </div>
                 <div class="buttons" align="center">
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar" onclick="return confirm('Deseja editar os dados?');" /></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar" onclick="return confirm('Deseja apagar os dados?');" /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar" onclick="return confirm('Deseja editar os dados?');" /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar" onclick="return confirm('Deseja apagar os dados?');" /></span>
                 </div>
             </g:form>
         </div>

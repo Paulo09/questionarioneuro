@@ -64,7 +64,7 @@
                                     <label for="descricao"></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:convenio,field:'descricao','errors')}">
-                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite descricao " class="materialize-textarea" id="descricao" name="descricao" value="${fieldValue(bean:convenio,field:'descricao')}"/>
+                                    <g:textArea type="text" placeholder="Digite descricao " class="materialize-textarea" id="descricao" name="descricao" value="${fieldValue(bean:convenio,field:'descricao')}"/>
                                     <label for="descricao"><font size="3"><b>Descrição</b></font></label>
                                 </td>
                             </tr> 

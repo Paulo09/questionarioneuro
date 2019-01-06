@@ -19,9 +19,8 @@
 	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -42,17 +41,17 @@
                         <tbody >
 
                         <div class="card">
-                            <div class="card-content red lighten-2">
+                            <div class="card-content red lighten-2 z-depth-5">
                                 <h4 align="center" class="white-text">Questionário Video - EGG</h4>
                             </div>
-                            <div class="card-tabs">
+                            <div class="card-tabs z-depth-5">
                                 <ul class="tabs tabs-fixed-width grey lighten-4">&nbsp;<div class="red-text lighten-2"></div>
                                     <li class="tab"><a href="#perguntas1a10"><b><b>Perguntas </b>1 a 10</b></a></li>
                                     <li class="tab"><a href="#perguntas11a21"><b>11 a 21</b></a></li>
                                     <li class="tab"><a href="#perguntas22a29"><b>22 a 29</b></a></li>
                                 </ul>
                             </div>
-                            <div class="card-content grey lighten-4">
+                            <div class="card-content grey lighten-4 z-depth-5">
                             
                                 <div id="perguntas1a10">
                         
@@ -67,7 +66,6 @@
                                         <td valign="top" class="name"><font size="3"><b></b></font></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'problemaGravidezParto','errors')}">
                                             <g:checkBox   onclick="Mudarestado('voceRoncaFrequencia')" class="form-control" id="problemaGravidezParto" name="problemaGravidezParto" from="${questionariovideoeeg.constraints.problemaGravidezParto.inList}" value="${questionariovideoeeg.problemaGravidezParto}"></g:checkBox>
-                                            
                                             <label for="problemaGravidezParto"><font size="3"><b>Problema Gravidez Parto?</b></font></label>
                                         </td>
                                     </tr>
@@ -272,7 +270,7 @@
                                         </td>
                                     </tr><br>
                                      <div class="buttons" align="center">
-                                        <span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                                        <span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                                     </div><br>
                             </div>     
                         

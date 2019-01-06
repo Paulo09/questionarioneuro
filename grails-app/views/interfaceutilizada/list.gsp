@@ -13,34 +13,28 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 	  <!--Materilize embarcado-->
-        <title>Lista Medicoresponsavel</title>
+        <title>Lista Interfaceutilizada</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
+	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
-			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
-			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
+			<li class="tab"><a href="#test1">Sair</a></li>
+			<li class="tab"><a class="active" href="#test2">Menu</a></li>
+			<li class="tab disabled"><a href="#test3">Buscar</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">    
+	<body class="teal lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body>
-	    <g:form action="buscar" method="post" class="medicorequisitante">
-			<div class="list">
-				<div class="input-field col s8 ">
-				<input type="text" placeholder="Buscar Paciente" id="nome" name="nome" ><br/>
-			</div>
-			<div class="buttons" align="center">
-				<span class="button"><input  class="blue lighten-2 btn waves-effect waves-light" type="submit" style="padding:10px;margin:10px;size:30px;width:110px;" value="Buscar"/></span>
-			</div><br>
-		</g:form>
-
-        <div class="card"><div class="card-image"></div>
+    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+        <div class="card">
+		  <div class="card-image">
+		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
+		  <span class="card-title"><b>L</b>ista <b>Interfaceutilizada</b></span>
+		</div>
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
             </g:if>
             <div class="list">
                 <table class="striped centered grey lighten-2">
@@ -49,33 +43,33 @@
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="crm" title="Crm" />
+                   	        <g:sortableColumn property="cadastro" title="Cadastro" />
                         
-                   	        <g:sortableColumn property="dtCadastro" title="Dt Cadastro" />
+                   	        <g:sortableColumn property="descricao" title="Descricao" />
                         
                    	        <g:sortableColumn property="nome" title="Nome" />
                         
                         </tr>
                     </thead>
                     <tbody>
-                    <g:each in="${medicoresponsavelList}" status="i" var="medicoresponsavel">
+                    <g:each in="${interfaceutilizadaList}" status="i" var="interfaceutilizada">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
-                            <td><g:link action="show" id="${medicoresponsavel.id}">${fieldValue(bean:medicoresponsavel, field:'id')}</g:link></td>
+                            <td><g:link action="show" id="${interfaceutilizada.id}">${fieldValue(bean:interfaceutilizada, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:medicoresponsavel, field:'crm')}</td>
+                            <td>${fieldValue(bean:interfaceutilizada, field:'cadastro')}</td>
                         
-                            <td>${fieldValue(bean:medicoresponsavel, field:'dtCadastro')}</td>
+                            <td>${fieldValue(bean:interfaceutilizada, field:'descricao')}</td>
                         
-                            <td>${fieldValue(bean:medicoresponsavel, field:'nome')}</td>
+                            <td>${fieldValue(bean:interfaceutilizada, field:'nome')}</td>
                         
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
-				 <ul class="pagination" align="center"><li class="active yellow lighten-1"><g:paginate total="${Medicoresponsavel.count()}"/></ul>
+			<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
+				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Interfaceutilizada.count()}"/></ul>
             </nav>
         </div>
 		   <!--Import jQuery before materialize.js-->

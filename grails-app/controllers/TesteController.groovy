@@ -54,7 +54,7 @@ class TesteController {
         def teste = Teste.get( params.id )
 
         if(!teste) {
-            flash.message = "Teste não encontrado id ${params.id}"
+            flash.message = "Teste nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ teste : teste ] }
@@ -68,7 +68,7 @@ class TesteController {
             redirect(action:list)
         }
         else {
-            flash.message = "Teste não encontrado id ${params.id}"
+            flash.message = "Teste nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +77,7 @@ class TesteController {
         def teste = Teste.get( params.id )
 
         if(!teste) {
-            flash.message = "Teste não encontrado id ${params.id}"
+            flash.message = "Teste nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,7 +98,7 @@ class TesteController {
             }
         }
         else {
-            flash.message = "Teste não encontrado id ${params.id}"
+            flash.message = "Teste nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

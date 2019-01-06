@@ -1,2 +1,0 @@
-# questionarioneuro
-Questionário Projeto Neuro

@@ -54,7 +54,7 @@ class MedicoresponsavelController {
         def medicoresponsavel = Medicoresponsavel.get( params.id )
 
         if(!medicoresponsavel) {
-            flash.message = "Medicoresponsavel não encontrado id ${params.id}"
+            flash.message = "Medicoresponsavel nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ medicoresponsavel : medicoresponsavel ] }
@@ -68,7 +68,7 @@ class MedicoresponsavelController {
             redirect(action:list)
         }
         else {
-            flash.message = "Medicoresponsavel não encontrado id ${params.id}"
+            flash.message = "Medicoresponsavel nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +77,7 @@ class MedicoresponsavelController {
         def medicoresponsavel = Medicoresponsavel.get( params.id )
 
         if(!medicoresponsavel) {
-            flash.message = "Medicoresponsavel não encontrado id ${params.id}"
+            flash.message = "Medicoresponsavel nÃ£o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -90,15 +90,16 @@ class MedicoresponsavelController {
         if(medicoresponsavel) {
             medicoresponsavel.properties = params
             if(!medicoresponsavel.hasErrors() && medicoresponsavel.save()) {
-                flash.message = "Medicoresponsavel ${params.id} updated"
+                flash.message = "Medicoresponsavel ${params.nome} Editado com Sucesso!"
                 redirect(action:show,id:medicoresponsavel.id)
             }
             else {
+               
                 render(view:'edit',model:[medicoresponsavel:medicoresponsavel])
             }
         }
         else {
-            flash.message = "Medicoresponsavel não encontrado id ${params.id}"
+            flash.message = "Medicoresponsavel nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }
@@ -116,7 +117,18 @@ class MedicoresponsavelController {
             redirect(action:show,id:medicoresponsavel.id)
         }
         else {
-            render(view:'create',model:[medicoresponsavel:medicoresponsavel])
+             
+            def validaNome='Campo Nome ObrigatÃ³rio, favor preencha.'
+            def validaCrm='Campo Crm ObrigatÃ³rio, favor preencha.'
+            def validacao=''
+            if(params.nome==""){
+                validacao+=validaNome
+            }
+            if(params.crm==""){
+                validacao+=validaCrm
+            }
+         
+            render(view:'create',model:[medicoresponsavel:medicoresponsavel,validacao:validacao])
         }
     }
 }

@@ -16,26 +16,22 @@
 		
         <title>Cadastrar Responsaveltecnica</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
+			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
+			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/create/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/create/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>C</b>adastrar <b>Responsaveltecnica</b></span>
-		</div>
+    <body>
+        <div class="card grey lighten-2 z-depth-5"><div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${responsaveltecnica}">
             <div class="errors">
@@ -44,10 +40,14 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
                 <div class="dialog">
-                    <table>
+                    <table class="striped left">
                         <tbody>
-                        
-                            <tr class="prop">
+
+                            <div class="card-content yellow lighten-2">
+                                <h4 align="center" class="blue-text">Cadastrar Técnico Responsável</h4>
+                            </div>
+
+                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:responsaveltecnica,field:'nome','errors')}">
                                     <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:responsaveltecnica,field:'nome')}"/>
@@ -55,11 +55,27 @@
                                 </td>
                             </tr> 
                         
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:responsaveltecnica,field:'coren','errors')}">
+                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite coren " id="coren" name="coren" size="50" value="${fieldValue(bean:responsaveltecnica,field:'coren')}"/>
+									<label for="coren"><font size="3"><b>Coren</b></font></label>
+                                </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:responsaveltecnica,field:'observacao','errors')}">
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite observacao " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:responsaveltecnica,field:'observacao')}"/>
+									<label for="observacao"><font size="3"><b>Observacao</b></font></label>
+                                </td>
+                            </tr> 
+                        
                         </tbody>
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light blue" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

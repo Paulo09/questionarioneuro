@@ -18,15 +18,15 @@
 	<nav class="nav-extended btn waves-effect waves-light  red lighten-2">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+			<li class="tab"><a href="create" target="_self">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
 	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+    <body>
        
         <div class="body">
              <g:if test="${flash.message}">
@@ -43,9 +43,20 @@
 				<span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
 			</div><br>
 
-
             <div class="list">
-                <table class="striped centered grey lighten-2">
+
+
+				<div class="card z-depth-5">
+				<div class="card-image"></div>
+				<div class="body">
+
+				<div class="list">
+					<div class="card-content red lighten-2">
+					<h4 align="center" class="white-text">Listar Convênio(s)</h4>
+				</div>
+
+			
+                <table class="striped centered grey lighten-2 z-depth-5">
                     <thead>
                         <tr>
                         

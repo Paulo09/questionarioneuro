@@ -52,7 +52,7 @@
                         <tr class="prop">
                             <td valign="top" class="name"><b> Data Cadastro:</td>
                             
-                            <td valign="top" class="value">${fieldValue(bean:convenio, field:'cadastro')}</td>
+                            <td valign="top" class="value">${String.format('%td/%<tm/%<tY',convenio?.cadastro)}</td>
                             
                         </tr>
                     

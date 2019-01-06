@@ -27,9 +27,9 @@
 	<body class="white lighten-2 z-depth-5">    
    	<div class="container" style="margin-top:40px;">
 
-	  <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
-            </g:if>   
+	<g:if test="${flash.message}">
+		<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
+	</g:if>   
 
 	<g:form action="buscar" method="post" class="paciente">
 		<div class="list">
@@ -43,12 +43,12 @@
 
 	<g:if test="${medicorequisitanteList}">
 
-			<div class="card z-depth-5">
+			<div class="card grey lighten-4 z-depth-5">
 			<div class="card-image"></div>
 			<div class="body">
 			<body class="white lighten-2">    
 			
-			<body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+			<body>
 				<div class="card"><div class="card-image"></div>
 				<div class="body">
 				
