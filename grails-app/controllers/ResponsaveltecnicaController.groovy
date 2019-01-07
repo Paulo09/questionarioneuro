@@ -44,6 +44,36 @@ class ResponsaveltecnicaController {
 			render "Responsaveltecnica Id:${responsaveltecnica.id} - Salvo com sucesso!" 
 		}else{render "Erro: Responsaveltecnica nao foi salvo!"}	    
     }
+
+      def buscar ={
+
+        def nome=params.nome
+        def buscaSingular=""
+        def buscaGeral=""
+
+        if(params.nome==""){redirect(action:list)}
+		
+		if(params.nome)
+		{
+			buscaSingular = Responsaveltecnica.findAllByNomeLike("%"+params.nome+"%")
+    
+	        if(buscaSingular){
+			 return [ responsaveltecnicaList: buscaSingular ]
+			}
+            else{
+                flash.message = "TÃ©ncnica(o): ${nome}, nÃ£o cadastrado!"
+		        redirect(action:buscar)  
+            }
+		}
+		else { 
+            if(params.nome!=null){
+                //if(!params.max) params.max = 10
+                buscaGeral = Questionariovideoeeg.findAll()
+                return [ responsaveltecnicaList: buscaGeral ]
+            }
+		}
+     
+      }
    
     def list = {
         if(!params.max) params.max = 10
@@ -54,7 +84,7 @@ class ResponsaveltecnicaController {
         def responsaveltecnica = Responsaveltecnica.get( params.id )
 
         if(!responsaveltecnica) {
-            flash.message = "Responsaveltecnica não encontrado id ${params.id}"
+            flash.message = "Responsaveltecnica nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ responsaveltecnica : responsaveltecnica ] }
@@ -68,7 +98,7 @@ class ResponsaveltecnicaController {
             redirect(action:list)
         }
         else {
-            flash.message = "Responsaveltecnica não encontrado id ${params.id}"
+            flash.message = "Responsaveltecnica nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +107,7 @@ class ResponsaveltecnicaController {
         def responsaveltecnica = Responsaveltecnica.get( params.id )
 
         if(!responsaveltecnica) {
-            flash.message = "Responsaveltecnica não encontrado id ${params.id}"
+            flash.message = "Responsaveltecnica nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,7 +128,7 @@ class ResponsaveltecnicaController {
             }
         }
         else {
-            flash.message = "Responsaveltecnica não encontrado id ${params.id}"
+            flash.message = "Responsaveltecnica nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

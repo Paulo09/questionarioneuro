@@ -44,6 +44,45 @@ class QuestionariovideoeegController {
 			render "Questionariovideoeeg Id:${questionariovideoeeg.id} - Salvo com sucesso!" 
 		}else{render "Erro: Questionariovideoeeg nao foi salvo!"}	    
     }
+
+     def buscar ={
+
+        def nome=params.nome
+        def buscaSingular=""
+        def buscaGeral=""
+
+        println "Questionario video EEG"
+
+        if(params.nome==""){redirect(action:list)}
+		
+		if(params.nome)
+		{
+           
+            if (params.nome.isInteger()){
+                    buscaSingular = Questionariovideoeeg.findAllById(params.nome)
+                if(buscaSingular){
+                return [ questionariovideoeegList: buscaSingular ]
+                }
+                else{
+                    flash.message = "Paciente:${nome}, nÃ£o cadastrado!"
+                    redirect(action:buscar)  
+                }
+		    }
+            else{
+                    flash.message = "Questionario:${params.nome} Digite id!"
+                    redirect(action:buscar)  
+                }
+        }    
+		else { 
+            if(params.nome!=null){
+                //if(!params.max) params.max = 10
+                buscaGeral = Questionariovideoeeg.findAll()
+                return [ questionariovideoeegList: buscaGeral ]
+            }
+		}
+     
+      }
+   
    
     def list = {
         if(!params.max) params.max = 10
@@ -54,7 +93,7 @@ class QuestionariovideoeegController {
         def questionariovideoeeg = Questionariovideoeeg.get( params.id )
 
         if(!questionariovideoeeg) {
-            flash.message = "Questionariovideoeeg não encontrado id ${params.id}"
+            flash.message = "Questionariovideoeeg nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionariovideoeeg : questionariovideoeeg ] }
@@ -68,7 +107,7 @@ class QuestionariovideoeegController {
             redirect(action:list)
         }
         else {
-            flash.message = "Questionariovideoeeg não encontrado id ${params.id}"
+            flash.message = "Questionariovideoeeg nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +116,7 @@ class QuestionariovideoeegController {
         def questionariovideoeeg = Questionariovideoeeg.get( params.id )
 
         if(!questionariovideoeeg) {
-            flash.message = "Questionariovideoeeg não encontrado id ${params.id}"
+            flash.message = "Questionariovideoeeg nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,7 +137,7 @@ class QuestionariovideoeegController {
             }
         }
         else {
-            flash.message = "Questionariovideoeeg não encontrado id ${params.id}"
+            flash.message = "Questionariovideoeeg nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

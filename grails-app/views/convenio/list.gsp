@@ -42,7 +42,7 @@
 					</div>
 					</div>
 					<div class="buttons" align="center">
-						<span class="button"><input  class="btn waves-effect waves-light blue lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
+						<span class="button"><input  class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
 					</div><br>
 				</g:form>
 

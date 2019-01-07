@@ -51,9 +51,7 @@ class PacienteController {
         def buscaGeral=""
 
         if(params.nome==""){redirect(action:list)}
-
-        println "...Valor Paciente:...."+params.nome
-		
+	
 		if(params.nome)
 		{
 			buscaSingular = Paciente.findAllByNomeLike("%"+params.nome+"%")

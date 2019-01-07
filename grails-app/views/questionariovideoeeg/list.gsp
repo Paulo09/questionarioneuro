@@ -30,43 +30,42 @@
        
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
 
-			 <div class="list">
-				<div class="input-field col s8 ">
-				<input type="text" id="Editbox1" name="login" ><br/>
-				<label for="icon_telephone">Nome Convênio</label>
-			</div>
-			  </div>
-			<div class="buttons" align="center">
-				<span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
-			</div><br>
+			<g:form action="buscar" method="post" class="questionariovideoeeg">
+				<div class="list">
+					<div class="input-field col s8 ">
+					<input type="text" id="nome" name="nome" ><br/>
+					<label for="icon_telephone">Buscar: Id questionário Video EEG</label>
+				</div>
+				</div>
+				<div class="buttons" align="center">
+					<span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
+				</div><br>
+			</g:form>
 
-            <div class="list">
-
-
+            	<div class="list">
 				<div class="card z-depth-5">
 				<div class="card-image"></div>
 				<div class="body">
 
 				<div class="list">
 					<div class="card-content red lighten-2">
-					<h4 align="center" class="white-text">Listar Convênio(s)</h4>
+					<h4 align="center" class="white-text">Listar Questionário(s)</h4>
 				</div>
 
-			
                 <table class="striped centered grey lighten-2 z-depth-5">
                     <thead>
                         <tr>
                         
                    	        <g:sortableColumn property="id" title="Id" />
                         
-                   	        <g:sortableColumn property="paisParentes" title="Pais Parentes" />
+                   	        <g:sortableColumn property="paciente" title="Paciente" />
                         
                    	        <g:sortableColumn property="problemaGravidezParto" title="Problema Gravidez Parto" />
                         
-                   	        <g:sortableColumn property="desenvolvimentoNormal" title="Desenvolvimento Normal" />
+                   	        <g:sortableColumn property="desenvolvimentoNormal" title="Desen Normal" />
                         
                         </tr>
                     </thead>
@@ -76,11 +75,11 @@
                         
                             <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:questionariovideoeeg, field:'paisParentes')}</td>
+                            <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'paciente')}</g:link></td>
                         
-                            <td>${fieldValue(bean:questionariovideoeeg, field:'problemaGravidezParto')}</td>
+                            <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'problemaGravidezParto')}</g:link></td>
                         
-                            <td>${fieldValue(bean:questionariovideoeeg, field:'desenvolvimentoNormal')}</td>
+                            <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'desenvolvimentoNormal')}</g:link></td>
                         </tr>
                     </g:each>
                     </tbody>

@@ -28,7 +28,7 @@
    	<div class="container" style="margin-top:40px;">
     <body>
 
-	    <g:form action="buscar" method="post" class="questionarioenfermagem">
+	    <g:form action="buscar" method="post" class="medicorequisitante">
 			<div class="list">
 				<div class="input-field col s8 ">
 				<input type="text" placeholder="Buscar: Questionario Enfermagem" id="nome" name="nome" ><br/>
@@ -37,8 +37,6 @@
 				<span class="button"><input  class="red lighten-2 btn waves-effect waves-light" type="submit" style="padding:10px;margin:10px;size:30px;width:110px;" value="Buscar"/></span>
 			</div><br>
 		</g:form>
-
-		<g:if test="${questionarioenfermagemList}">
 
         <div class="card z-depth-5"><div class="card-image"></div>
         <div class="body">
@@ -85,11 +83,10 @@
                     </tbody>
                 </table>
             </div>
-					<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
-						<ul class="pagination" align="center"><li class="active red lighten-2"><g:paginate total="${Questionarioenfermagem.count()}"/></ul>
-					</nav>
-				</div>
-		</g:if>
+			<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
+				 <ul class="pagination" align="center"><li class="active red lighten-2"><g:paginate total="${Questionarioenfermagem.count()}"/></ul>
+            </nav>
+        </div>
 		   <!--Import jQuery before materialize.js-->
 		   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		   <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>

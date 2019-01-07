@@ -18,57 +18,80 @@
 	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
+			<li class="tab"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
+			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
 		  </ul>
 		</div>
 	</nav>
 	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
     <body>
-        <div class="card">
-		  <div class="card-image"></div>
-        <div class="body">
-             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light blue lighten-1">${flash.message}</nav>
-            </g:if>
-            <div class="list">
-                <table class="striped centered grey lighten-2">
-                    <thead>
-                        <tr>
-                        
-                   	        <g:sortableColumn property="id" title="Id" />
-                        
-                   	        <g:sortableColumn property="coren" title="Coren" />
-                        
-                   	        <g:sortableColumn property="nome" title="Nome" />
-                        
-                   	        <g:sortableColumn property="observacao" title="Observacao" />
-                        
-                        </tr>
-                    </thead>
-                    <tbody>
-                    <g:each in="${responsaveltecnicaList}" status="i" var="responsaveltecnica">
-                        <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
-                            <td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'id')}</g:link></td>
-                        
-                            <td>${fieldValue(bean:responsaveltecnica, field:'coren')}</td>
-                        
-                            <td>${fieldValue(bean:responsaveltecnica, field:'nome')}</td>
-                        
-                            <td>${fieldValue(bean:responsaveltecnica, field:'observacao')}</td>
-                        
-                        </tr>
-                    </g:each>
-                    </tbody>
-                </table>
-            </div>
-			<nav class="nav-extended btn waves-effect waves-light yellow lighten-1" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
-				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Responsaveltecnica.count()}"/></ul>
-            </nav>
-        </div>
+					<g:if test="${flash.message}">
+						<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
+					</g:if>
+
+					<g:form action="buscar" method="post" class="responsaveltecnica">
+						<div class="list">
+							<div class="input-field col s8 ">
+							<input type="text" id="nome" name="nome" ><br/>
+							<label for="icon_telephone">Buscar: Nome Técnica</label>
+						</div>
+						</div>
+						<div class="buttons" align="center">
+							<span class="button"><input  class="btn waves-effect waves-light blue lighten-1 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
+						</div><br>
+					</g:form>
+
+					<g:if test="${responsaveltecnicaList}">
+
+					<div class="card z-depth-5">
+					<div class="card-image"></div>
+					<div class="body">
+	
+					<div class="list">
+
+					    <div class="list">
+							<div class="card-content yellow lighten-1">
+							<h4 align="center" class="blue-text">Listar Convênio(s)</h4>
+						</div>
+						
+						<table class="striped centered grey lighten-2">
+							<thead>
+								<tr>
+								
+									<g:sortableColumn property="id" title="Id" />
+								
+									<g:sortableColumn property="coren" title="Coren" />
+								
+									<g:sortableColumn property="nome" title="Nome" />
+								
+									<g:sortableColumn property="observacao" title="Observacao" />
+								
+								</tr>
+							</thead>
+							<tbody>
+							<g:each in="${responsaveltecnicaList}" status="i" var="responsaveltecnica">
+								<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
+								
+									<td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'id')}</g:link></td>
+								
+									<td>${fieldValue(bean:responsaveltecnica, field:'coren')}</td>
+								
+									<td>${fieldValue(bean:responsaveltecnica, field:'nome')}</td>
+								
+									<td>${fieldValue(bean:responsaveltecnica, field:'observacao')}</td>
+								
+								</tr>
+							</g:each>
+							</tbody>
+						</table>
+					</div>
+					<nav class="nav-extended btn waves-effect waves-light yellow lighten-1" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
+						<ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Responsaveltecnica.count()}"/></ul>
+					</nav>
+				</div>
+			</g:if>	
 		   <!--Import jQuery before materialize.js-->
 		   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		   <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>

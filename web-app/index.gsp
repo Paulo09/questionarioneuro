@@ -12,11 +12,13 @@
       <!--Let browser know website is optimized for mobile-->
       <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="../css/materialize.css">
+
 	  <!--Materilize embarcado-->
 	  
     </head>
 
-    <body class="red lighten-2">    
+    <body onload="window.scrollTo(0,1);" class="red lighten-2">  
+
    	<div class="container" style="margin-top:40px;">
    
           <div class="card">
