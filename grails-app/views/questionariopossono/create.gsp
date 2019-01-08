@@ -16,26 +16,21 @@
 		
         <title>Cadastrar Questionariopossono</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/create/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/create/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>C</b>adastrar <b>Questionariopossono</b></span>
-		</div>
+    <body>
+        <div class="card z-depth-5"><div class="card-image z-depth-5"></div>
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${questionariopossono}">
             <div class="errors">
@@ -44,30 +39,34 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
                 <div class="dialog">
-                    <table>
+                    <table class="striped left grey lighten-2">
                         <tbody>
+
+                             <div class="card-content red lighten-2">
+                                <h4 align="center" class="white-text">Novo Questionário Pós-Sono</h4>
+                            </div>
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopossono,field:'quantoTempodemorouDormir','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="quantoTempodemorouDormir" name="quantoTempodemorouDormir" from="${questionariopossono.constraints.quantoTempodemorouDormir.inList}" value="${questionariopossono.quantoTempodemorouDormir}" ></g:select>
-									<label for="quantoTempodemorouDormir"><font size="3"><b>Quanto Tempodemorou Dormir</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="quantoTempodemorouDormir" name="quantoTempodemorouDormir" from="${questionariopossono.constraints.quantoTempodemorouDormir.inList}" value="${questionariopossono.quantoTempodemorouDormir}" noSelection="['':'- Quanto Tempodemorou Dormir -']" ></g:select>
+									<label for="quantoTempodemorouDormir"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopossono,field:'finalExameComoAcordou','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="finalExameComoAcordou" name="finalExameComoAcordou" from="${questionariopossono.constraints.finalExameComoAcordou.inList}" value="${questionariopossono.finalExameComoAcordou}" ></g:select>
-									<label for="finalExameComoAcordou"><font size="3"><b>Final Exame Como Acordou</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="finalExameComoAcordou" name="finalExameComoAcordou" from="${questionariopossono.constraints.finalExameComoAcordou.inList}" value="${questionariopossono.finalExameComoAcordou}" noSelection="['':'- Final Exame Como Acordou -']" ></g:select>
+									<label for="finalExameComoAcordou"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopossono,field:'comoAcordouFinalExame','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="comoAcordouFinalExame" name="comoAcordouFinalExame" from="${questionariopossono.constraints.comoAcordouFinalExame.inList}" value="${questionariopossono.comoAcordouFinalExame}" ></g:select>
-									<label for="comoAcordouFinalExame"><font size="3"><b>Como Acordou Final Exame</b></font></label>
+                                    <i class="fa fa-list"></i><g:select id="comoAcordouFinalExame" name="comoAcordouFinalExame" from="${questionariopossono.constraints.comoAcordouFinalExame.inList}" value="${questionariopossono.comoAcordouFinalExame}" noSelection="['':'- Como Acordou Final Exame -']" ></g:select>
+									<label for="comoAcordouFinalExame"><font size="3"><b></b></font></label>
                                 </td>
                             </tr> 
                         
@@ -131,7 +130,7 @@
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

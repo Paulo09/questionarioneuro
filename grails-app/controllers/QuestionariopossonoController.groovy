@@ -44,6 +44,45 @@ class QuestionariopossonoController {
 			render "Questionariopossono Id:${questionariopossono.id} - Salvo com sucesso!" 
 		}else{render "Erro: Questionariopossono nao foi salvo!"}	    
     }
+
+     def buscar ={
+
+        def nome=params.nome
+        def buscaSingular=""
+        def buscaGeral=""
+
+        if(params.nome==""){redirect(action:list)}
+		
+		if(params.nome)
+		{
+           
+            if (params.nome.isInteger()){
+                    buscaSingular = Questionariopossono.findAllById(params.nome)
+
+                    println "Ferreira...:"+buscaSingular
+
+                if(buscaSingular){
+                return [ questionariopossonoList: buscaSingular ]
+                }
+                else{
+                    flash.message = "Questionario:${nome}, nÃ£o cadastrado!"
+                    redirect(action:buscar)  
+                }
+		    }
+            else{
+                    flash.message = "Questionario:${params.nome} Digite id!"
+                    redirect(action:buscar)  
+                }
+        }    
+		else { 
+            if(params.nome!=null){
+                //if(!params.max) params.max = 10
+                buscaGeral = Questionariopossono.findAll()
+                return [ questionariopossonoList: buscaGeral ]
+            }
+		}
+     
+      }
    
     def list = {
         if(!params.max) params.max = 10
@@ -54,7 +93,7 @@ class QuestionariopossonoController {
         def questionariopossono = Questionariopossono.get( params.id )
 
         if(!questionariopossono) {
-            flash.message = "Questionariopossono não encontrado id ${params.id}"
+            flash.message = "Questionariopossono nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionariopossono : questionariopossono ] }
@@ -68,7 +107,7 @@ class QuestionariopossonoController {
             redirect(action:list)
         }
         else {
-            flash.message = "Questionariopossono não encontrado id ${params.id}"
+            flash.message = "Questionariopossono nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +116,7 @@ class QuestionariopossonoController {
         def questionariopossono = Questionariopossono.get( params.id )
 
         if(!questionariopossono) {
-            flash.message = "Questionariopossono não encontrado id ${params.id}"
+            flash.message = "Questionariopossono nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,7 +137,7 @@ class QuestionariopossonoController {
             }
         }
         else {
-            flash.message = "Questionariopossono não encontrado id ${params.id}"
+            flash.message = "Questionariopossono nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

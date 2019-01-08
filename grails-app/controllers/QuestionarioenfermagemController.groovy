@@ -44,6 +44,44 @@ class QuestionarioenfermagemController {
 			render "Questionarioenfermagem Id:${questionarioenfermagem.id} - Salvo com sucesso!" 
 		}else{render "Erro: Questionarioenfermagem nao foi salvo!"}	    
     }
+
+     def buscar ={
+	     		
+        def buscaSingular=""
+        def buscaGeral=""
+
+        if(params.nome==""){redirect(action:list)}
+	
+		if(params.nome)
+		{
+           
+            if (params.nome.isInteger()){
+                   buscaSingular = Questionarioenfermagem.findAllById(params.nome)
+
+                   println "Forca...:"+buscaSingular
+
+                if(buscaSingular){
+                return [ questionarioenfermagemList: buscaSingular ]
+                }
+                else{
+                    flash.message = "Questionario Enfermagem:${params.nome}, nÃ£o cadastrado!"
+                    redirect(action:buscar)  
+                }
+		    }
+            else{
+                    flash.message = "Questionario Enfermagem:${params.nome} Digite id!"
+                    redirect(action:buscar)  
+                }
+        }    
+		else { 
+            if(params.nome!=null){
+                //if(!params.max) params.max = 10
+                buscaGeral = Questionarioenfermagem.findAll()
+                return [ questionarioenfermagemList: buscaGeral ]
+            }
+		}
+    }    
+
    
     def list = {
         if(!params.max) params.max = 10
@@ -54,7 +92,7 @@ class QuestionarioenfermagemController {
         def questionarioenfermagem = Questionarioenfermagem.get( params.id )
 
         if(!questionarioenfermagem) {
-            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionarioenfermagem : questionarioenfermagem ] }
@@ -68,7 +106,7 @@ class QuestionarioenfermagemController {
             redirect(action:list)
         }
         else {
-            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +115,7 @@ class QuestionarioenfermagemController {
         def questionarioenfermagem = Questionarioenfermagem.get( params.id )
 
         if(!questionarioenfermagem) {
-            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem nï¿½o encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,7 +136,7 @@ class QuestionarioenfermagemController {
             }
         }
         else {
-            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem nï¿½o encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

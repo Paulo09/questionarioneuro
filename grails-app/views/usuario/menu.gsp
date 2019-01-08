@@ -1,8 +1,9 @@
 <!doctype html>
 <html lang="PT">
   <head>
-			 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
-	     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+		 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
+	     
+		 
 		 
 		 <!--Materilize embarcado-->
 	      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -17,7 +18,7 @@
       <!--Import materialize.css-->
       <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
       <!--Let browser know website is optimized for mobile-->
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;"/>
 	  <link rel="stylesheet" href="materialize.css">
     <meta charset="utf-8">
 	 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -270,7 +271,7 @@
 					</div>
 				</a>
 
-				<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+				<!--<div class="blue-grey darken-1 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariovideoeeg.jpg);" >
 				<a href="/teste/questionariovideoeeg">
 				</div>
@@ -304,7 +305,7 @@
 							</div>
 						</div>
 					</div>
-				</a>
+				</a>-->
           
 		<div class="fixed-action-btn"> 
 		  <a href="#" data-activates="slide-out" class="button-collapse btn btn-floating pulse red lighten-2" style="background-image:url(${createLinkTo(dir:'images',file:'menu-background-botaocolapse-imagem.jpg')});"><i class="material-icons">menu</i></a>

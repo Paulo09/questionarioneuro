@@ -16,7 +16,7 @@
 		
         <title>Cadastrar Questionariovideoeeg</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="list" target="_self">Voltar</a></li>
@@ -29,7 +29,7 @@
     <body class="white lighten-2">
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${questionariovideoeeg}">
             <div class="errors">
@@ -270,7 +270,7 @@
                                         </td>
                                     </tr><br>
                                      <div class="buttons" align="center">
-                                        <span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                                        <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                                     </div><br>
                             </div>     
                         

@@ -15,7 +15,7 @@
 	  <!--Materilize embarcado-->
         <title>Lista Questionariovideoeeg</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light  red lighten-2">  
+	<nav class="nav-extended btn waves-effect waves-light  red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
@@ -29,7 +29,8 @@
     <body>
        
         <div class="body">
-             <g:if test="${flash.message}">
+            
+			<g:if test="${flash.message}">
 				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
 
@@ -41,7 +42,7 @@
 				</div>
 				</div>
 				<div class="buttons" align="center">
-					<span class="button"><input  class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
+					<span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
 				</div><br>
 			</g:form>
 

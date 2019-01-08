@@ -15,16 +15,15 @@
 	  <!--Materilize embarcado-->
         <title>Lista Medicorequisitante</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
+	<nav class="nav-extended btn waves-effect waves-light  yellow lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1"><font color="#2196f3">Sair</font></a></li>
-			<li class="tab mdl-color-text--blue-600"><a class="active" href="#test2"><font color="#2196f3">Menu</font></a></li>
-			<li class="tab disabled"><a href="#test3"><font color="#2196f3">Buscar</font></a></li>
+			<li class="tab"><a href="/teste/usuario/menu" target="_self"><font color="#2196f3">Voltar</font></a></li>
+			<li class="tab  disabled"><a class="active"><font color="#2196f3">Listar</font></a></li>
+			<li class="tab"><a href="create" target="_self"><font color="#2196f3">Novo</font></a></li>
 		  </ul>
 		</div>
 	</nav>
-
 	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
     <body>
@@ -35,7 +34,7 @@
 			<input type="text" placeholder="Buscar Paciente" id="nome" name="nome" ><br/>
 		</div>
 		<div class="buttons" align="center">
-			<span class="button"><input  class="blue lighten-2 btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
+			<span class="button"><input  class="blue lighten-2 btn waves-effect waves-light z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
 		</div><br>
 	</g:form>
 
