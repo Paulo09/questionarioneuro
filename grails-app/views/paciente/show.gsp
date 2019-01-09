@@ -32,13 +32,13 @@
 		  <div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="dialog">
                 <table class="striped left grey lighten-2">
                     <tbody>
 
-                         <div class="card-content blue lighten-2">
+                        <div class="card-content blue lighten-2">
                             <h4 align="center" class="white-text">Dados Paciente</h4>
                         </div>
 
@@ -106,8 +106,8 @@
             <div class="buttons" align="center"><br>
                 <g:form>
                     <input type="hidden" name="id" value="${paciente?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

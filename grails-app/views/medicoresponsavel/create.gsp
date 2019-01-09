@@ -64,7 +64,7 @@
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:medicoresponsavel,field:'observacao','errors')}">
-                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite Observação " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:medicoresponsavel,field:'observacao')}"/>
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite Observação" class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:medicoresponsavel,field:'observacao')}"/>
 									<label for="observacao"><font size="3"><b>Observação</b></font></label>
                                 </td>
                             </tr>
@@ -84,7 +84,7 @@
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light blue lighten-1" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light blue lighten-1" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

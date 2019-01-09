@@ -163,7 +163,7 @@
 			</div>
 				<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--yellow-600" >
 					  <div>
-						<strong><b>Cadastro</b></strong>
+						<strong><b>Questionário Satisfação</b></strong>
 					  </div>
 					</div>
 				</div>

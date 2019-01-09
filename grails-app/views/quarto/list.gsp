@@ -59,13 +59,12 @@
                         <tr>
                         
                    	        <g:sortableColumn property="id" title="Id" />
+
+							<g:sortableColumn property="nome" title="Nome" />   
+
+							<g:sortableColumn property="numero" title="Numero" />
                         
                    	        <g:sortableColumn property="descricao" title="Descricao" />
-                        
-                   	        <g:sortableColumn property="nome" title="Nome" />
-                        
-                   	        <g:sortableColumn property="numero" title="Numero" />
-                        
                         </tr>
                     </thead>
                     <tbody>
@@ -73,13 +72,12 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${quarto.id}">${fieldValue(bean:quarto, field:'id')}</g:link></td>
+
+							<td><g:link action="show" id="${quarto.id}">${fieldValue(bean:quarto, field:'nome')}</g:link></td>
+
+							<td><g:link action="show" id="${quarto.id}">${fieldValue(bean:quarto, field:'numero')}</g:link></td>
                         
-                            <td>${fieldValue(bean:quarto, field:'descricao')}</td>
-                        
-                            <td>${fieldValue(bean:quarto, field:'nome')}</td>
-                        
-                            <td>${fieldValue(bean:quarto, field:'numero')}</td>
-                        
+                            <td><g:link action="show" id="${quarto.id}">${fieldValue(bean:quarto, field:'descricao')}</g:link></td>
                         </tr>
                     </g:each>
                     </tbody>

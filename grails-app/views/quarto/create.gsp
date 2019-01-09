@@ -16,7 +16,7 @@
 		
         <title>Cadastrar Quarto</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -25,17 +25,13 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/create/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/create/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>C</b>adastrar <b>Quarto</b></span>
-		</div>
+    <body>
+        <div class="card grey lighten-2 z-depth-5"><div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${quarto}">
             <div class="errors">
@@ -44,30 +40,34 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
                 <div class="dialog">
-                    <table>
+                    <table class="striped left grey lighten-2">
                         <tbody>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:quarto,field:'descricao','errors')}">
-                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite descricao " class="form-control" id="descricao" name="descricao" value="${fieldValue(bean:quarto,field:'descricao')}"/>
-									<label for="descricao"><font size="3"><b>Descricao</b></font></label>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
+
+                             <div class="card-content teal lighten-2">
+                                <h4 align="center" class="white-text">Novo Quarto</h4>
+                            </div>
+
+                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:quarto,field:'nome','errors')}">
                                     <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite nome " id="nome" name="nome" size="50" value="${fieldValue(bean:quarto,field:'nome')}"/>
 									<label for="nome"><font size="3"><b>Nome</b></font></label>
                                 </td>
-                            </tr> 
-                        
+                            </tr>
+
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:quarto,field:'numero','errors')}">
                                     <i class="fa fa-sort-numeric-asc"></i><input placeholder="Digite numero " class="form-control"  size="50" type="number" id="numero" name="numero" value="${fieldValue(bean:quarto,field:'numero')}" />
-									<label for="numero"><font size="3"><b>Numero</b></font></label>
+									<label for="numero"><font size="3"><b>Número</b></font></label>
+                                </td>
+                            </tr> 
+                        
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:quarto,field:'descricao','errors')}">
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite descricao " class="materialize-textarea" id="descricao" name="descricao" value="${fieldValue(bean:quarto,field:'descricao')}"/>
+									<label for="descricao"><font size="3"><b>Descrição</b></font></label>
                                 </td>
                             </tr> 
                         
@@ -75,7 +75,7 @@
                     </table>
                 </div>
 	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/create/botao',file:'botao.jpg')});padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                    <span class="button"><input  class="btn waves-effect waves-light z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
         </div>

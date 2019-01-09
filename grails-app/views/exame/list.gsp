@@ -15,7 +15,7 @@
 	  <!--Materilize embarcado-->
         <title>Lista Exame</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -26,15 +26,11 @@
 	</nav>
 	<body class="teal lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>L</b>ista <b>Exame</b></span>
-		</div>
+    <body>
+        <div class="card"><div class="card-image"></div>
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
             <div class="list">
                 <table class="striped centered grey lighten-2">
