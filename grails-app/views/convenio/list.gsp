@@ -16,13 +16,12 @@
         <title>Lista Convenio</title>
     </head>
 	
-	<nav class="nav-extended btn waves-effectred blue lighten-2">  
+	<nav class="nav-extended btn waves-effect waves-light  blue lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a class="active" href="/teste/usuario/sair" target="_self"> Sair</a></li>
-			<li class="tab"><a class="active" href="/teste/usuario/menu" target="_self">Voltar</a></li>
-			<li class="tab disabled"><a>Listar Convênio</a></li>
-			<li class="tab"><a class="active" href="/teste/convenio/create" target="_self">Cadastrar Convênio</a></li>
+			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+			<li class="tab"><a href="create" target="_self">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
