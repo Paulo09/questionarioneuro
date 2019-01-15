@@ -43,228 +43,201 @@
                     <table>
                         <tbody>
 
-                             <div class="card-content red lighten-2 z-depth-5">
+                             <div class="card-content red lighten-2">
                                 <h4 align="center" class="white-text">Pesquisa de Satisfação</h4>
                             </div>
-                            <div class="card-tabs">
-                                <ul class="tabs tabs-fixed-width grey lighten-4">&nbsp;<div class="red-text lighten-2"></div>
-                                    <li class="tab"><a href="#pg1"><b>1.Velocidade do atendimento?</a></li>
-                                    <li class="tab"><a href="#pg2"><b>2.Facilidade no atendimento?</b></a></li>
-                                    <li class="tab"><a href="#pg3"><b>3.Seu atendimento?</b></a></li>
-                                </ul>
-                            </div>
 
-                        <div id="pg1">    
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'tempoSalaEspera','errors')}">
-                                   <select class="icons" name="tempoSalaEspera" id="tempoSalaEspera" >
-                                        <option value="">- Tempo Sala de Espera -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'tempoEsperaEsperaExamesRealizados','errors')}">
-                                    <select class="icons" name="tempoEsperaEsperaExamesRealizados" id="tempoEsperaEsperaExamesRealizados" >
-                                        <option value="">- Tempo Espera Espera Exames Realizados -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'tempoEsperaExameResultado','errors')}">
-                                    <select class="icons" name="tempoEsperaExameResultado" id="tempoEsperaExameResultado" >
-                                        <option value="">- Tempo Espera Exame Resultado -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'facilidadedeMarcarConsultaAtendido','errors')}">
-                                    <select class="icons" name="facilidadedeMarcarConsultaAtendido" id="facilidadedeMarcarConsultaAtendido" >
-                                        <option value="">- Facilidadede Marcar Consulta Atendido -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'horaAtendimento','errors')}">
-                                    <select class="icons" name="horaAtendimento" id="horaAtendimento" >
-                                        <option value="">- Hora Atendimento -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'retornoImediatoChamada','errors')}">
-                                    <select class="icons" name="retornoImediatoChamada" id="retornoImediatoChamada" >
-                                        <option value="">- Retorno Imediato Chamada -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr>
-                        </div> 
+                            <ul class="collapsible">
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_1</i><b>Como você avaliaria a velocidade do atendimento?</b></span></div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
 
-                        <div id="pg2">      
+                                            
+                                                <select class="icons" name="tempoSalaEspera" id="tempoSalaEspera" >
+                                                    <option value=""><b>Tempo Sala de Espera:</b></option>
+                                                    <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                    <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                    <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                    <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                    <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                </select>
+                                                <select class="icons" name="tempoEsperaEsperaExamesRealizados" id="tempoEsperaEsperaExamesRealizados" >
+                                                    <option value="">Tempo Espera Exames Realizados:</option>
+                                                    <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                    <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                    <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                    <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                    <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                </select>
+
+                                                <select class="icons" name="tempoEsperaExameResultado" id="tempoEsperaExameResultado" >
+                                                    <option value="">Tempo Espera Exame Resultado:</option>
+                                                    <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                    <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                    <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                    <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                    <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                </select>
+                                        
+
+                                        </p></div>
+                                    </li>
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_2</i>
+                                            <b>Como você avaliaria a facilidade no atendimento?</b>
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+
+
+                                                    <select class="icons" name="facilidadedeMarcarConsultaAtendido" id="facilidadedeMarcarConsultaAtendido" >
+                                                        <option value="">Facilidadede Marcar Consulta Atendido:</option>
+                                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                    </select> 
+                                                
+                                                    <select class="icons" name="horaAtendimento" id="horaAtendimento" >
+                                                        <option value="">Hora Atendimento:</option>
+                                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                    </select> 
+                                                
+                                                    <select class="icons" name="retornoImediatoChamada" id="retornoImediatoChamada" >
+                                                        <option value="">Retorno Imediato Chamada:</option>
+                                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                                    </select>
+
+                                        </p></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_3</i>
+                                            <b>Como você avaliaria o seu atendimento?</b>
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+
+                                            <select class="icons" name="explicaQuerSaber" id="explicaQuerSaber" >
+                                                <option value="">Explica o que você quer saber</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select> 
+                                
+                                            <select class="icons" name="simpaticaUtil" id="simpaticaUtil" >
+                                                <option value="">Simpatica Útil para Você</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>
+
+                                        </p></div>
+                                    </li>
+
+                                     <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_4</i>
+                                            <b>Como você avaliaria a atitude dos outros funcionários?</b>                                        
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+                                            <select class="icons" name="explicaQuerSaberOutros" id="explicaQuerSaberOutros" >
+                                                <option value="">Explica Quer Saber:</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>
+                                            <select class="icons" name="simpaticaUtilOutros" id="simpaticaUtilOutros" >
+                                                <option value="">Simpatica Útil para Você:</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>
+                                        </p></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_5</i>
+                                            <b>Como avaliaria nossas instalações?</b>                                        
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+
+                                             <select class="icons" name="facilidadeOrientar" id="facilidadeOrientar" >
+                                                <option value="">Facilidade de se Orientar</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>
+                                            <select class="icons" name="confortoSeguranca" id="confortoSeguranca" >
+                                                <option value="">Conforto e Segurança</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>
+                                            <select class="icons" name="organizacaoLimpeza" id="organizacaoLimpeza" >
+                                                <option value="">Organização e Limpeza</option>
+                                                <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
+                                                <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
+                                                <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
+                                                <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
+                                                <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
+                                            </select>                       
+                                        </p></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_6</i>
+                                            <b>Você nos recomendaria a seus amigos e parentes?</b>                                        
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+                                            <select class="icons" name="voceRecomendaria" id="voceRecomendaria" >
+                                                <option value="">Você Recomendaria</option>
+                                                <option value="Sim" data-icon="../images/pesquisa/sim.png" class="left">SIM</option>
+                                                <option value="Não" data-icon="../images/pesquisa/nao.png" class="left">NÃO</option>
+                                            </select>   
+                                        </p></div>
+                                    </li>
+
+                                    <li>
+                                        <div class="collapsible-header"><i class="material-icons">filter_7</i>
+                                            <b>Em que podemos melhorar?</b>                                        
+                                        </div>
+                                        <div class="collapsible-body yellow lighten-4"><p>
+                                            <g:textArea type="text" placeholder="Digite observacao " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:pesquisasatisfacao,field:'observacao')}"/>
+									        <label for="observacao"><font size="3"><b>Em que podemos melhorar?</b></font></label>
+                                            <div class="buttons" align="center">
+                                                <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                                            </div>
+                                    </p></div>
+                                    </li>
+                            </ul> 
                         
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'explicaQuerSaber','errors')}">
-                                    <select class="icons" name="explicaQuerSaber" id="explicaQuerSaber" >
-                                        <option value="">- Explica o que você quer saber -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'simpaticaUtil','errors')}">
-                                    <select class="icons" name="simpaticaUtil" id="simpaticaUtil" >
-                                        <option value="">- Simpatica Útil para Você -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'explicaQuerSaberOutros','errors')}">
-                                    <select class="icons" name="explicaQuerSaberOutros" id="explicaQuerSaberOutros" >
-                                        <option value="">- Explica Quer Saber -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'simpaticaUtilOutros','errors')}">
-                                    <select class="icons" name="simpaticaUtilOutros" id="simpaticaUtilOutros" >
-                                        <option value="">- Simpatica Útil para Você -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'facilidadeOrientar','errors')}">
-                                    <select class="icons" name="facilidadeOrientar" id="facilidadeOrientar" >
-                                        <option value="">- Facilidade de se Orientar -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'confortoSeguranca','errors')}">
-                                    <select class="icons" name="confortoSeguranca" id="confortoSeguranca" >
-                                        <option value="">- Conforto e Segurança -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'organizacaoLimpeza','errors')}">
-                                    <select class="icons" name="organizacaoLimpeza" id="organizacaoLimpeza" >
-                                        <option value="">- Organização e Limpeza -</option>
-                                        <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
-                                        <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
-                                        <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
-                                        <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
-                                        <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'voceRecomendaria','errors')}">
-                                    <select class="icons" name="voceRecomendaria" id="voceRecomendaria" >
-                                        <option value="">- Você Recomendaria -</option>
-                                        <option value="Sim" data-icon="../images/pesquisa/sim.png" class="left">SIM</option>
-                                        <option value="Não" data-icon="../images/pesquisa/nao.png" class="left">NÃO</option>
-                                    </select>
-                                </td>
-                            </tr> 
-                        
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'observacao','errors')}">
-                                    <g:textArea type="text" placeholder="Digite observacao " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:pesquisasatisfacao,field:'observacao')}"/>
-									<label for="observacao"><font size="3"><b>Em que podemos melhorar?</b></font></label>
-                                </td>
-                            </tr>
+                                                  
+                          
                         </div>      
                         
                         </tbody>
                     </table>
-                </div>
-	            <div class="buttons" align="center">
+        
+	            <!--<div class="buttons" align="center">
                     <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>

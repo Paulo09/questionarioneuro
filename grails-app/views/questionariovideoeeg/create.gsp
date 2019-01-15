@@ -38,7 +38,7 @@
             </g:hasErrors>
             <g:form action="save" method="post" >
             
-                        <tbody >
+                    <tbody >
 
                         <div class="card">
                             <div class="card-content red lighten-2 z-depth-5">
@@ -289,6 +289,9 @@
                 var display = document.getElementById(el).style.visibility;
                 if(display == "hidden")document.getElementById(el).style.visibility = 'visible';
                 else document.getElementById(el).style.visibility = 'hidden';}
+            </script>
+            <script>
+                $(document).ready(function(){$('.tabs').tabs();});
             </script>
     </body>
 </html>
