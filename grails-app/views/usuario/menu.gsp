@@ -158,8 +158,8 @@
 
 
 		  <div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
-			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/cadastrar.jpg);" >
-			<a href="/teste/usuario">
+			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/pesquisaSatisfacao.jpg);" >
+			<a href="/teste/pesquisasatisfacao/list">
 			</div>
 				<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--yellow-600" >
 					  <div>

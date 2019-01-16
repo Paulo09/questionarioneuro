@@ -27,6 +27,9 @@
 	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
     <body>
+	    <g:if test="${flash.message}">
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
+        </g:if>
 	    <g:form action="buscar" method="post" class="medicorequisitante">
 			<div class="list">
 				<div class="input-field col s8 ">
@@ -37,17 +40,17 @@
 			</div><br>
 		</g:form>
 
+		<g:if test="${medicoresponsavelList}">
+
         <div class="card"><div class="card-image"></div>
         <div class="body">
-             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
-            </g:if>
+           
             <div class="list">
                 <div class="card-content yellow lighten-1">
-					<h4 align="center" class="white-text"><font color="#2196f3">Listar Medico Responsável</h4>
-				</div>
+							<h4 align="center" class="white-text"><font color="#2196f3">Listar Médico Responsável</h4>
+						</div>
 
-                <table class="striped centered grey lighten-2">
+						<table class="striped centered grey lighten-2">
                     <thead>
                         <tr>
                         
@@ -58,8 +61,6 @@
                    	        <g:sortableColumn property="crm" title="Crm" />
                         
                    	        <g:sortableColumn property="dtCadastro" title="Data Cadastro" />
-                        
-                   	        
                         
                         </tr>
                     </thead>
@@ -81,11 +82,12 @@
                     </g:each>
                     </tbody>
                 </table>
-            </div>
-			<nav class="nav-extended btn waves-effect waves-light yellow lighten-1 blue-text">  
-				 <ul class="pagination blue-text" align="center"><li class="active yellow lighten-1 blue-text"><font color="#2196f3"><g:paginate total="${Medicoresponsavel.count()}"/></ul>
-            </nav>
-        </div>
+            	</div>
+				<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
+					<ul class="pagination blue-text" align="center"><li class="active yellow lighten-1"><g:paginate total="0"/></ul>
+				</nav>
+				</div>
+		</g:if>
 		   <!--Import jQuery before materialize.js-->
 		   <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 		   <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>

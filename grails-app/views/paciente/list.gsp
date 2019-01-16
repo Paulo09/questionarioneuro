@@ -69,18 +69,18 @@
                         
                             <td><g:link action="show" id="${paciente.id}">${fieldValue(bean:paciente, field:'id')}</g:link></td>
                         
-                            <td>${fieldValue(bean:paciente, field:'nome')}</td>
+                            <td><g:link action="show" id="${paciente.id}">${fieldValue(bean:paciente, field:'nome')}</g:link></td>
                         
-                            <td>${fieldValue(bean:paciente, field:'cpf')}</td>
+                            <td><g:link action="show" id="${paciente.id}">${fieldValue(bean:paciente, field:'cpf')}</g:link></td>
                         
-                            <td>${fieldValue(bean:paciente, field:'dataNascimento')}</td>
+                            <td><g:link action="show" id="${paciente.id}">${fieldValue(bean:paciente, field:'dataNascimento')}</g:link></td>
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
 			<nav class="nav-extended btn waves-effect waves-light blue lighten-2">  
-				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Paciente.count()}"/></ul>
+				 <ul class="pagination" align="center"><li class="active"><g:paginate total="${Paciente.count()}"/></ul>
             </nav>
         </div>
 		   <!--Import jQuery before materialize.js-->

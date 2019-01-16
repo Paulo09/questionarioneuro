@@ -44,6 +44,34 @@ class MedicoresponsavelController {
 			render "Medicoresponsavel Id:${medicoresponsavel.id} - Salvo com sucesso!" 
 		}else{render "Erro: Medicoresponsavel nao foi salvo!"}	    
     }
+
+     def buscar ={
+	     
+        def buscaSingular=""
+        def buscaGeral=""
+
+        if(params.nome==""){redirect(action:list)}
+		
+		if(params.nome)
+		{
+			buscaSingular = Medicoresponsavel.findAllByNomeLike("%"+params.nome+"%")
+	        if(buscaSingular){
+			 return [ medicoresponsavelList: buscaSingular ]
+			}
+            else{
+                flash.message = "Médico Responsável: ${params.nome}, não cadastrado!"
+		        redirect(action:buscar)  
+            }
+		}
+		else { 
+            if(params.nome!=null){
+                if(!params.max) params.max = 10
+                buscaGeral = Medicoresponsavel.findAll()
+                return [ medicoresponsavelList: buscaGeral ]
+            }
+		}
+      }
+   
    
     def list = {
         if(!params.max) params.max = 10
@@ -99,7 +127,7 @@ class MedicoresponsavelController {
             }
         }
         else {
-            flash.message = "Medicoresponsavel n�o encontrado id ${params.id}"
+            flash.message = "Medicoresponsavel não encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

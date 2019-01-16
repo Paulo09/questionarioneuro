@@ -61,12 +61,14 @@
 								<tr>
 								
 									<g:sortableColumn property="id" title="Id" />
-								
-									<g:sortableColumn property="cadastro" title="Cadastro" />
-								
-									<g:sortableColumn property="descricao" title="Descricao" />
-								
+
 									<g:sortableColumn property="nome" title="Nome" />
+								
+									<g:sortableColumn property="cadastro" title="Data Cadastro" />
+								
+									<g:sortableColumn property="descricao" title="Descrição" />
+								
+									
 								
 								</tr>
 							</thead>
@@ -76,11 +78,11 @@
 								
 									<td><g:link action="show" id="${convenio.id}">${fieldValue(bean:convenio, field:'id')}</g:link></td>
 								
-									<td>${String.format('%td/%<tm/%<tY',convenio?.cadastro)}</td>
+									<td><g:link action="show" id="${convenio.id}">${String.format('%td/%<tm/%<tY',convenio?.cadastro)}</g:link></td>
 								
-									<td>${fieldValue(bean:convenio, field:'descricao')}</td>
+									<td><g:link action="show" id="${convenio.id}">${fieldValue(bean:convenio, field:'descricao')}</g:link></td>
 								
-									<td>${fieldValue(bean:convenio, field:'nome')}</td>
+									<td><g:link action="show" id="${convenio.id}">${fieldValue(bean:convenio, field:'nome')}</g:link></td>
 								
 								</tr>
 							</g:each>

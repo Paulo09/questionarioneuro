@@ -60,10 +60,10 @@
                         <tr>
                         
                    	        <g:sortableColumn property="id" title="Id" />
+
+							<g:sortableColumn property="nome" title="Nome" />   
                         
                    	        <g:sortableColumn property="coren" title="Coren" />
-                        
-                   	        <g:sortableColumn property="nome" title="Nome" />
                         
                    	        <g:sortableColumn property="observacao" title="Observacao" />
                         
@@ -74,20 +74,20 @@
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
                         
                             <td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'id')}</g:link></td>
+
+							<td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'nome')}</g:link></td>
                         
-                            <td>${fieldValue(bean:responsaveltecnica, field:'coren')}</td>
+                            <td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'coren')}</g:link></td>
                         
-                            <td>${fieldValue(bean:responsaveltecnica, field:'nome')}</td>
-                        
-                            <td>${fieldValue(bean:responsaveltecnica, field:'observacao')}</td>
+                            <td><g:link action="show" id="${responsaveltecnica.id}">${fieldValue(bean:responsaveltecnica, field:'observacao')}</g:link></td>
                         
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
-				<nav class="nav-extended btn waves-effect waves-light yellow lighten-1" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
-					<ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Responsaveltecnica.count()}"/></ul>
+				<nav class="nav-extended btn waves-effect waves-light yellow lighten-1">  
+					<ul class="pagination" align="center"><li class="active"><g:paginate total="0"/></ul>
 				</nav>
         	</div>
 		</g:if>

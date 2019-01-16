@@ -62,6 +62,14 @@
                                     <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite crm " id="crm" name="crm" size="50" value="${fieldValue(bean:medicorequisitante,field:'crm')}"/>
 									<label for="crm"><font size="3"><b>Crm</b></font></label>
                                 </td>
+                            </tr>
+
+                            <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:medicorequisitante,field:'observacao','errors')}">
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite Observação" class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:medicorequisitante,field:'observacao')}"/>
+									<label for="observacao"><font size="3"><b>Observação</b></font></label>
+                                </td>
                             </tr> 
                         
                             <tr class="prop" style="display:none">

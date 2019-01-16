@@ -73,11 +73,11 @@
                         
                             <td><g:link action="show" id="${usuario.id}">${fieldValue(bean:usuario, field:'id')}</g:link></td>
 
-							<td>${fieldValue(bean:usuario, field:'nome')}</td>
+							<td><g:link action="show" id="${usuario.id}">${fieldValue(bean:usuario, field:'nome')}</g:link></td>
                         
-                            <td>${fieldValue(bean:usuario, field:'permissao')}</td>
+                            <td><g:link action="show" id="${usuario.id}">${fieldValue(bean:usuario, field:'permissao')}</g:link></td>
                         
-                            <td>${fieldValue(bean:usuario, field:'foneCelular')}</td>
+                            <td><g:link action="show" id="${usuario.id}">${fieldValue(bean:usuario, field:'foneCelular')}</g:link></td>
                         
                         </tr>
                     </g:each>

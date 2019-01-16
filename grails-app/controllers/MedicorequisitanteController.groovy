@@ -66,7 +66,7 @@ class MedicorequisitanteController {
 		else { 
             if(params.nome!=null){
                 if(!params.max) params.max = 10
-                buscaGeral = Usuario.findAll()
+                buscaGeral = Medicorequisitante.findAll()
                 return [ medicorequisitanteList: buscaGeral ]
             }
 		}

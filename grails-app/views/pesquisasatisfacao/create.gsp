@@ -1,10 +1,10 @@
 
 
 <html>
-    <head>       
+    <head>
 		 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
 	     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		 
+
 		 <!--Materilize embarcado-->
 	      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	      <!--Import materialize.css-->
@@ -13,10 +13,10 @@
 	      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 		  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
-		
-        <title>Cadastrar Pesquisasatisfacao</title>         
+
+        <title>Cadastrar Pesquisasatisfacao</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2">
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="#test1">Sair</a></li>
@@ -25,7 +25,7 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">   
+	<body class="white lighten-2">
 	<div class="container" style="margin-top:40px;">
     <body>
         <div class="card z-depth-5"><div class="card-image"></div>
@@ -52,7 +52,7 @@
                                         <div class="collapsible-header"><i class="material-icons">filter_1</i><b>Como você avaliaria a velocidade do atendimento?</b></span></div>
                                         <div class="collapsible-body yellow lighten-4"><p>
 
-                                            
+
                                                 <select class="icons" name="tempoSalaEspera" id="tempoSalaEspera" >
                                                     <option value=""><b>Tempo Sala de Espera:</b></option>
                                                     <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
@@ -78,8 +78,6 @@
                                                     <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                     <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
                                                 </select>
-                                        
-
                                         </p></div>
                                     </li>
                                     <li>
@@ -96,8 +94,8 @@
                                                         <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
                                                         <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                         <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                                    </select> 
-                                                
+                                                    </select>
+
                                                     <select class="icons" name="horaAtendimento" id="horaAtendimento" >
                                                         <option value="">Hora Atendimento:</option>
                                                         <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
@@ -105,8 +103,8 @@
                                                         <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
                                                         <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                         <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                                    </select> 
-                                                
+                                                    </select>
+
                                                     <select class="icons" name="retornoImediatoChamada" id="retornoImediatoChamada" >
                                                         <option value="">Retorno Imediato Chamada:</option>
                                                         <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
@@ -132,8 +130,8 @@
                                                 <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
                                                 <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                 <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                            </select> 
-                                
+                                            </select>
+
                                             <select class="icons" name="simpaticaUtil" id="simpaticaUtil" >
                                                 <option value="">Simpatica Útil para Você</option>
                                                 <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
@@ -148,7 +146,7 @@
 
                                      <li>
                                         <div class="collapsible-header"><i class="material-icons">filter_4</i>
-                                            <b>Como você avaliaria a atitude dos outros funcionários?</b>                                        
+                                            <b>Como você avaliaria a atitude dos outros funcionários?</b>
                                         </div>
                                         <div class="collapsible-body yellow lighten-4"><p>
                                             <select class="icons" name="explicaQuerSaberOutros" id="explicaQuerSaberOutros" >
@@ -172,7 +170,7 @@
 
                                     <li>
                                         <div class="collapsible-header"><i class="material-icons">filter_5</i>
-                                            <b>Como avaliaria nossas instalações?</b>                                        
+                                            <b>Como avaliaria nossas instalações?</b>
                                         </div>
                                         <div class="collapsible-body yellow lighten-4"><p>
 
@@ -199,26 +197,26 @@
                                                 <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
                                                 <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                 <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                            </select>                       
+                                            </select>
                                         </p></div>
                                     </li>
 
                                     <li>
                                         <div class="collapsible-header"><i class="material-icons">filter_6</i>
-                                            <b>Você nos recomendaria a seus amigos e parentes?</b>                                        
+                                            <b>Você nos recomendaria a seus amigos e parentes?</b>
                                         </div>
                                         <div class="collapsible-body yellow lighten-4"><p>
                                             <select class="icons" name="voceRecomendaria" id="voceRecomendaria" >
                                                 <option value="">Você Recomendaria</option>
                                                 <option value="Sim" data-icon="../images/pesquisa/sim.png" class="left">SIM</option>
                                                 <option value="Não" data-icon="../images/pesquisa/nao.png" class="left">NÃO</option>
-                                            </select>   
+                                            </select>
                                         </p></div>
                                     </li>
 
                                     <li>
                                         <div class="collapsible-header"><i class="material-icons">filter_7</i>
-                                            <b>Em que podemos melhorar?</b>                                        
+                                            <b>Em que podemos melhorar?</b>
                                         </div>
                                         <div class="collapsible-body yellow lighten-4"><p>
                                             <g:textArea type="text" placeholder="Digite observacao " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:pesquisasatisfacao,field:'observacao')}"/>
@@ -228,20 +226,20 @@
                                             </div>
                                     </p></div>
                                     </li>
-                            </ul> 
-                        
-                                                  
-                          
-                        </div>      
-                        
+                            </ul>
+
+
+
+                        </div>
+
                         </tbody>
                     </table>
-        
+
 	            <!--<div class="buttons" align="center">
                     <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                 </div><br>
             </g:form>
-        </div>
+        </div>-->
 		    <!--Import jQuery before materialize.js-->
 	       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	       <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>
