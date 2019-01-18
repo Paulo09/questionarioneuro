@@ -16,12 +16,11 @@
 
         <title>Cadastrar Pesquisasatisfacao</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2">
+	<nav class="nav-extended btn waves-effect waves-light teal lighten-2">
 		<div class="nav-content">
-		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+		   <ul class="tabs tabs-transparent">
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -31,7 +30,7 @@
         <div class="card z-depth-5"><div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${pesquisasatisfacao}">
             <div class="errors">
@@ -43,7 +42,7 @@
                     <table>
                         <tbody>
 
-                             <div class="card-content red lighten-2">
+                             <div class="card-content teal lighten-2">
                                 <h4 align="center" class="white-text">Pesquisa de Satisfação</h4>
                             </div>
 
@@ -234,13 +233,9 @@
 
                         </tbody>
                     </table>
-
-	            <!--<div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
-                </div><br>
             </g:form>
-        </div>-->
-		    <!--Import jQuery before materialize.js-->
+
+	        <!--Import jQuery before materialize.js-->
 	       <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 	       <script type="text/javascript" src="${createLinkTo(dir:'js',file:'materialize.js')}"></script>
 		   <script>

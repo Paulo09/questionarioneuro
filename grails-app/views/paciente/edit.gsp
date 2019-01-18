@@ -18,9 +18,8 @@
 	<nav class="nav-extended btn waves-effect waves-light blue lighten-2">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/paciente/list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Editar Dados Paciente</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -33,7 +32,7 @@
 		</div>
         <div class="body">
             <g:if test="${flash.message}">
-	            <nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
+	            <nav class="nav-extended btn waves-effect waves-light blue lighten-2">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${paciente}">
             <div class="errors">
@@ -47,7 +46,7 @@
                         <tbody>
 
                             <div class="card-content blue lighten-2">
-                                <h4 align="center" class="white-text">Editar Dados Paciente</h4>
+                                <h4 align="center" class="white-text">Editar Dados Paciente: ${paciente.nome}</h4>
                             </div>
 
                              <tr class="prop">

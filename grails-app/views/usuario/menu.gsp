@@ -73,7 +73,7 @@
   </head>
   <body>
 
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2">
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">
 		    <div class="nav-content">
 		      <ul class="tabs tabs-transparent">
 		        <!--<li class="tab disabled"><a href="show/${usuario.id}" target="_self">${usuario}</a></li>-->

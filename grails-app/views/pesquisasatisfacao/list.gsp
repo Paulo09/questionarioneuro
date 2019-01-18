@@ -15,28 +15,31 @@
 	  <!--Materilize embarcado-->
         <title>Lista Pesquisasatisfacao</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+			<li class="tab"><a href="create" target="_self">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">    
+	<body class="white lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+    <body>
         <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>L</b>ista <b>Pesquisasatisfacao</b></span>
-		</div>
+		  <div class="card-image"></div>
         <div class="body">
              <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="list">
+
+				<div class="list">
+					<div class="card-content teal lighten-2">
+					<h4 align="center" class="white-text">Listar Pesquisa Satisfação</h4>
+				</div>
+
                 <table class="striped centered grey lighten-2">
                     <thead>
                         <tr>
@@ -76,8 +79,8 @@
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
-				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Pesquisasatisfacao.count()}"/></ul>
+			<nav class="nav-extended btn waves-effect waves-light teal">  
+				 <ul class="pagination" align="center"><li class="active"><g:paginate total="${Pesquisasatisfacao.count()}"/></ul>
             </nav>
         </div>
 		   <!--Import jQuery before materialize.js-->

@@ -16,104 +16,103 @@
 		  
         <title>Dados Questionariopossono</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/questionariopossono/list" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Dados</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/show/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/show/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>D</b>ados <b>Questionariopossono</b></span>
-		</div>		
+    <body>
+        <div class="card z-depth-5"><div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light blue lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="dialog">
-                <table class="striped centered">
+                <table class="striped left">
                     <tbody>
+
+                        <div class="card-content red lighten-2 z-depth-5">
+                            <h4 align="center" class="white-text">Questionário Pós-Sono</h4>
+                        </div>
 
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id:</td>
+                            <td valign="top" class="name"><b>Id:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'id')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Quanto Tempodemorou Dormir:</td>
+                            <td valign="top" class="name"><b>Quanto Tempodemorou Dormir:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'quantoTempodemorouDormir')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Final Exame Como Acordou:</td>
+                            <td valign="top" class="name"><b>Final Exame Como Acordou:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'finalExameComoAcordou')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Como Acordou Final Exame:</td>
+                            <td valign="top" class="name"><b>Como Acordou Final Exame:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'comoAcordouFinalExame')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Comentario:</td>
+                            <td valign="top" class="name"><b>Comentario:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'comentario')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Despertou Durante Exame:</td>
+                            <td valign="top" class="name"><b>Despertou Durante Exame:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'despertouDuranteExame')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Final Exame Como Acordou Campo:</td>
+                            <td valign="top" class="name"><b>Final Exame Como Acordou Campo:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'finalExameComoAcordouCampo')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Quantas Horas Sono Acha Dormiu:</td>
+                            <td valign="top" class="name"><b>Quantas Horas Sono Acha Dormiu:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'quantasHorasSonoAchaDormiu')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Quantas Vezes:</td>
+                            <td valign="top" class="name"><b>Quantas Vezes:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'quantasVezes')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Tomou Medicacao Dormir Exame:</td>
+                            <td valign="top" class="name"><b>Tomou Medicação Dormir Exame:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'tomouMedicacaoDormirExame')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Tomou Medicacao Dormir Exame Campo:</td>
+                            <td valign="top" class="name"><b>Tomou Medicação Dormir Exame Campo:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariopossono, field:'tomouMedicacaoDormirExameCampo')}</td>
                             
@@ -125,8 +124,8 @@
             <div class="buttons" align="center"><br>
                 <g:form>
                     <input type="hidden" name="id" value="${questionariopossono?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

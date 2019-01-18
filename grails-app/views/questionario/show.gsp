@@ -19,9 +19,9 @@
 	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/barraMenu',file:'barraMenu.jpg')});">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+			<li class="tab"><a href="create" target="_self">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>

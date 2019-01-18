@@ -16,12 +16,11 @@
 		  
         <title>Dados Quarto</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light">  
+	<nav class="nav-extended btn waves-effect waves-light z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/quarto/list" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Dados</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -44,28 +43,28 @@
 
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id:</td>
+                            <td valign="top" class="name"><b>Id:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:quarto, field:'id')}</td>
                             
                         </tr>
 
                          <tr class="prop">
-                            <td valign="top" class="name">Nome:</td>
+                            <td valign="top" class="name"><b>Nome:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:quarto, field:'nome')}</td>
                             
                         </tr>
 
                           <tr class="prop">
-                            <td valign="top" class="name">Numero:</td>
+                            <td valign="top" class="name"><b>Número:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:quarto, field:'numero')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Descrição:</td>
+                            <td valign="top" class="name"><b>Descrição:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:quarto, field:'descricao')}</td>
                             

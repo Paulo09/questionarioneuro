@@ -16,125 +16,124 @@
 		  
         <title>Dados Questionarioenfermagem</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/questionarioenfermagem/list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/show/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/show/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>D</b>ados <b>Questionarioenfermagem</b></span>
-		</div>		
+    <body>
+         <div class="card z-depth-5"><div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/message',file:'message.jpg')});">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="dialog">
-                <table class="striped centered">
+                <table class="striped left">
                     <tbody>
+
+                        <div class="card-content red lighten-2 z-depth-5">
+                            <h4 align="center" class="white-text">Questionário Enfermagem</h4>
+                        </div>
 
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Id:</td>
+                            <td valign="top" class="name"><b>Id:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'id')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Tipo Assistencia Enfermagem:</td>
+                            <td valign="top" class="name"><b>Tipo Assistencia Enfermagem:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'tipoAssistenciaEnfermagem')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Posicao Coleta:</td>
+                            <td valign="top" class="name"><b>Posicao Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'posicaoColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Ronco Coleta:</td>
+                            <td valign="top" class="name"><b>Ronco Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'roncoColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Anotacoes Enfermagem:</td>
+                            <td valign="top" class="name"><b>Anotacoes Enfermagem:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'anotacoesEnfermagem')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Ao Coleta:</td>
+                            <td valign="top" class="name"><b>Ao Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'aoColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Epap Coleta:</td>
+                            <td valign="top" class="name"><b>Epap Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'epapColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Eventos Exame:</td>
+                            <td valign="top" class="name"><b>Eventos Exame:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'eventosExame')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Fuga Coleta:</td>
+                            <td valign="top" class="name"><b>Fuga Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'fugaColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Hipo Coleta:</td>
+                            <td valign="top" class="name"><b>Hipo Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'hipoColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Hora Coleta:</td>
+                            <td valign="top" class="name"><b>Hora Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'horaColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Interfaceutilizada:</td>
+                            <td valign="top" class="name"><b>Interfaceutilizada:</td>
                             
                             <td valign="top" class="value"><g:link controller="interfaceutilizada" action="show" id="${questionarioenfermagem?.interfaceutilizada?.id}">${questionarioenfermagem?.interfaceutilizada?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Ipap Coleta:</td>
+                            <td valign="top" class="name"><b>Ipap Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'ipapColeta')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Sao2 Coleta:</td>
+                            <td valign="top" class="name"><b>Sao2 Coleta:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'sao2Coleta')}</td>
                             
@@ -146,8 +145,8 @@
             <div class="buttons" align="center"><br>
                 <g:form>
                     <input type="hidden" name="id" value="${questionarioenfermagem?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

@@ -15,26 +15,19 @@
 		  <!--Materilize embarcado-->
         <title>Editar Dados Pesquisasatisfacao</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/barraMenu',file:'barraMenu.jpg')});">  
-		<div class="nav-content">
-		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
-		  </ul>
-		</div>
+	<nav class="nav-extended btn waves-effect waves-light">  
+		<ul class="tabs tabs-transparent">
+			<li class="tab"><a href="/teste/pesquisasatisfacao" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+		</ul>
 	</nav>
 	<body class="teal lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/edit/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/edit/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>E</b>ditar Dados <b>Pesquisasatisfacao</b></span>
-		</div>
+    <body>
+        <div class="card"></div>
         <div class="body">
             <g:if test="${flash.message}">
-	            <nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/message',file:'message.jpg')});">${flash.message}</nav>
+	            <nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${pesquisasatisfacao}">
             <div class="errors">
@@ -166,7 +159,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="voceRecomendaria">Voce Recomendaria:</label>
+                                    <label for="voceRecomendaria">Você Recomendaria:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'voceRecomendaria','errors')}">
                                     <i class="fa fa-list"></i><g:select id="voceRecomendaria" name="voceRecomendaria" from="${pesquisasatisfacao.constraints.voceRecomendaria.inList}" value="${pesquisasatisfacao.voceRecomendaria}" ></g:select>
@@ -175,7 +168,7 @@
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="observacao">Observacao:</label>
+                                    <label for="observacao">Observação:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:pesquisasatisfacao,field:'observacao','errors')}">
                                     <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite observacao " class="form-control" id="observacao" name="observacao" value="${fieldValue(bean:pesquisasatisfacao,field:'observacao')}"/>
@@ -186,8 +179,8 @@
                     </table>
                 </div>
                 <div class="buttons" align="center">
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar" onclick="return confirm('Deseja editar os dados?');" /></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar" onclick="return confirm('Deseja apagar os dados?');" /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar" onclick="return confirm('Deseja editar os dados?');" /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar" onclick="return confirm('Deseja apagar os dados?');" /></span>
                 </div>
             </g:form>
         </div>

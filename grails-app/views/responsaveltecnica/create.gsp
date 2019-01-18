@@ -17,11 +17,10 @@
         <title>Cadastrar Responsaveltecnica</title>         
     </head>
 	<nav class="nav-extended btn waves-effect waves-light  yellow lighten-2">  
-		<div class="nav-content">
+        <div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="/teste/usuario/menu" target="_self"><font color="#2196f3">Voltar</font></a></li>
-			<li class="tab  disabled"><a class="active"><font color="#2196f3">Listar</font></a></li>
-			<li class="tab"><a href="create" target="_self"><font color="#2196f3">Novo</font></a></li>
+			<li class="tab"><a href="list" target="_self"><font color="#2196f3">Voltar</font></a></li>
+			<li class="tab"><a class="active"><font color="#2196f3">Novo</font></a></li>
 		  </ul>
 		</div>
 	</nav>

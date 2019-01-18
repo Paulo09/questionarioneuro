@@ -18,10 +18,9 @@
     </head>
 	<nav class="nav-extended btn waves-effect waves-light  blue lighten-2">  
 		<div class="nav-content">
-		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+		   <ul class="tabs tabs-transparent">
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>

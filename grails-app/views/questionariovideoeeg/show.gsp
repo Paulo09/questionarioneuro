@@ -19,9 +19,9 @@
 	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="/teste/questionariovideoeeg/list" target="_self">Voltar</a></li>
+			<li class="tab  disabled"><a class="active">Listar</a></li>
+			<li class="tab"><a href="/teste/questionariovideoeeg/create" target="_self">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -31,7 +31,7 @@
         <div class="card z-depth-5"><div class="card-image"></div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light yellow lighten-2 z-depth-5">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light blue lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <div class="dialog">
                 <table class="striped left grey lighten-2">

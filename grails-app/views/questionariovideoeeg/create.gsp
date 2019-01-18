@@ -56,9 +56,9 @@
                                 <div id="perguntas1a10">
                         
                                     <tr class="prop">
-                                        <td valign="top" class="name"><font size="3"><b>Pais Parentes Entre Si?</b></font></td>
+                                        <td valign="top" class="name"><font size="3"><b></b></font></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'paisParentes','errors')}">
-                                            <i class="fa fa-list"></i><g:select id="paisParentes" name="paisParentes" from="${questionariovideoeeg.constraints.paisParentes.inList}" value="${questionariovideoeeg.paisParentes}"/>
+                                            <i class="fa fa-list"></i><g:select id="paisParentes" name="paisParentes" from="${questionariovideoeeg.constraints.paisParentes.inList}" value="${questionariovideoeeg.paisParentes}" noSelection="['':'- Pais Parentes Entre Si? -']"/>
                                         </td>
                                     </tr> 
                                 
@@ -74,22 +74,22 @@
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'qualproblemaGravidezParto','errors')}">
                                             <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite qualproblemaGravidezParto " id="qualproblemaGravidezParto" name="qualproblemaGravidezParto" size="50" value="${fieldValue(bean:questionariovideoeeg,field:'qualproblemaGravidezParto')}"/>
-                                            <label for="qualproblemaGravidezParto"><font size="3"><b>Qualproblema Gravidez Parto</b></font></label>
+                                            <label for="qualproblemaGravidezParto"><font size="3"><b>Descreva Problema Gravidez Parto</b></font></label>
                                         </td>
                                     </tr>
                                      
                                 
                                     <tr class="prop">
-                                        <td valign="top" class="name"><font size="3"><b>Convulcao Infancia</b></font></td>
+                                        <td valign="top" class="name"><font size="3"><b></b></font></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'desenvolvimentoNormal','errors')}">
-                                            <i class="fa fa-list"></i><g:select id="desenvolvimentoNormal" name="desenvolvimentoNormal" from="${questionariovideoeeg.constraints.desenvolvimentoNormal.inList}" value="${questionariovideoeeg.desenvolvimentoNormal}" ></g:select>
+                                            <i class="fa fa-list"></i><g:select id="desenvolvimentoNormal" name="desenvolvimentoNormal" from="${questionariovideoeeg.constraints.desenvolvimentoNormal.inList}" value="${questionariovideoeeg.desenvolvimentoNormal}" noSelection="['':'- Desenvolvimento Normal? -']"  ></g:select>
                                         </td>
                                     </tr> 
                                 
                                     <tr class="prop">
-                                        <td valign="top" class="name"><font size="3"><b>Convulção Infância</b></font></td>
+                                        <td valign="top" class="name"><font size="3"><b></b></font></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'convulcaoInfancia','errors')}">
-                                            <i class="fa fa-list"></i><g:select id="convulcaoInfancia" name="convulcaoInfancia" from="${questionariovideoeeg.constraints.convulcaoInfancia.inList}" value="${questionariovideoeeg.convulcaoInfancia}" ></g:select>
+                                            <i class="fa fa-list"></i><g:select id="convulcaoInfancia" name="convulcaoInfancia" from="${questionariovideoeeg.constraints.convulcaoInfancia.inList}" value="${questionariovideoeeg.convulcaoInfancia}" noSelection="['':'- Convulção na Infância? -']" ></g:select>
                                         </td>
                                     </tr>
                                      
@@ -113,8 +113,8 @@
                                     <tr class="prop">
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'convenio','errors')}">
-                                            <g:select class="form-control" optionKey="id" from="${Convenio.list()}" name="convenio.id" value="${questionariovideoeeg?.convenio?.id}"></g:select> <a href="${createLinkTo(dir:'/convenio/create')}">* Cadastrar Convenio</a>
-                                            <label for="convenio"><font size="3"><b>- Convenio</b></font></label>
+                                            <g:select class="form-control" optionKey="id" from="${Convenio.list()}" name="convenio.id" value="${questionariovideoeeg?.convenio?.id}" noSelection="['':'- Convênio -']"></g:select> <a href="${createLinkTo(dir:'/convenio/create')}">* Cadastrar Convenio</a>
+                                            <label for="convenio"><font size="3"><b></b></font></label>
                                         </td>
                                     </tr> 
                                 
@@ -199,16 +199,16 @@
                                     <tr class="prop">
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'medicoRequisitante','errors')}">
-                                            <g:select class="form-control" optionKey="id" from="${Medicorequisitante.list()}" name="medicoRequisitante.id" value="${questionariovideoeeg?.medicoRequisitante?.id}" ></g:select> <a href="${createLinkTo(dir:'/medicorequisitante/create')}">* Cadastrar Medicorequisitante</a>
-                                            <label for="medicoRequisitante"><font size="3"><b>- Medico Requisitante</b></font></label>
+                                            <g:select class="form-control" optionKey="id" from="${Medicorequisitante.list()}" name="medicoRequisitante.id" value="${questionariovideoeeg?.medicoRequisitante?.id}" noSelection="['':'- Médico Requisitante -']" ></g:select> <a href="${createLinkTo(dir:'/medicorequisitante/create')}">* Cadastrar Medicorequisitante</a>
+                                            <label for="medicoRequisitante"><font size="3"><b></b></font></label>
                                         </td>
                                     </tr> 
                                 
                                     <tr class="prop">
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'medicoResponsavel','errors')}">
-                                            <g:select class="form-control" optionKey="id" from="${Medicoresponsavel.list()}" name="medicoResponsavel.id" value="${questionariovideoeeg?.medicoResponsavel?.id}" ></g:select> <a href="${createLinkTo(dir:'/medicoresponsavel/create')}">* Cadastrar Medicoresponsavel</a>
-                                            <label for="medicoResponsavel"><font size="3"><b>Medico Responsavel</b></font></label>
+                                            <g:select class="form-control" optionKey="id" from="${Medicoresponsavel.list()}" name="medicoResponsavel.id" value="${questionariovideoeeg?.medicoResponsavel?.id}" noSelection="['':'- Médico Responsável -']" ></g:select> <a href="${createLinkTo(dir:'/medicoresponsavel/create')}">* Cadastrar Medicoresponsavel</a>
+                                            <label for="medicoResponsavel"><font size="3"><b></b></font></label>
                                         </td>
                                     </tr> 
                                 
@@ -231,8 +231,8 @@
                                     <tr class="prop">
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'paciente','errors')}">
-                                            <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariovideoeeg?.paciente?.id}" ></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
-                                            <label for="paciente"><font size="3"><b>Paciente</b></font></label>
+                                            <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariovideoeeg?.paciente?.id}" noSelection="['':'- Paciente -']" ></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
+                                            <label for="paciente"><font size="3"><b></b></font></label>
                                         </td>
                                     </tr> 
                                 

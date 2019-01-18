@@ -16,12 +16,11 @@
 		
         <title>Cadastrar Quarto</title>         
     </head>
-	<nav class="nav-extended btn waves-effect waves-light">  
+	<nav class="nav-extended btn waves-effect waves-light z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
@@ -66,7 +65,7 @@
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:quarto,field:'descricao','errors')}">
-                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite descricao " class="materialize-textarea" id="descricao" name="descricao" value="${fieldValue(bean:quarto,field:'descricao')}"/>
+                                    <i class="fa fa-pencil-square-o"></i><g:textArea type="text" placeholder="Digite descrição" class="materialize-textarea" id="descricao" name="descricao" value="${fieldValue(bean:quarto,field:'descricao')}"/>
 									<label for="descricao"><font size="3"><b>Descrição</b></font></label>
                                 </td>
                             </tr> 

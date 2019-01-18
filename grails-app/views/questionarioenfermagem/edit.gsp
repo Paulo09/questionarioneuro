@@ -15,26 +15,20 @@
 		  <!--Materilize embarcado-->
         <title>Editar Dados Questionarioenfermagem</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/barraMenu',file:'barraMenu.jpg')});">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="#test1">Sair</a></li>
-			<li class="tab"><a class="active" href="#test2">Menu</a></li>
-			<li class="tab disabled"><a href="#test3">Buscar</a></li>
+			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="teal lighten-2">   
+	<body class="white lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body style="background-image:url(${createLinkTo(dir:'images/view/edit/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
-        <div class="card">
-		  <div class="card-image">
-		  <img src="${createLinkTo(dir:'images/view/edit/backgroundCard',file:'backgroundCard.jpg')}">
-		  <span class="card-title"><b>E</b>ditar Dados <b>Questionarioenfermagem</b></span>
-		</div>
-        <div class="body">
+    <body>
+        <div class="card z-depth-5"><div class="card-image"></div><div class="body">
             <g:if test="${flash.message}">
-	            <nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/edit/message',file:'message.jpg')});">${flash.message}</nav>
+	            <nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
             </g:if>
             <g:hasErrors bean="${questionarioenfermagem}">
             <div class="errors">
@@ -44,33 +38,37 @@
             <g:form method="post" >
                 <input type="hidden" name="id" value="${questionarioenfermagem?.id}" />
                 <div class="dialog">
-                    <table>
+                    <table class="striped left grey lighten-2">
                         <tbody>
+
+                            <div class="card-content red lighten-2 z-depth-5">
+                                <h4 align="center" class="white-text"></h4>
+                            </div>
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="tipoAssistenciaEnfermagem">Tipo Assistencia Enfermagem:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'tipoAssistenciaEnfermagem','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="tipoAssistenciaEnfermagem" name="tipoAssistenciaEnfermagem" from="${questionarioenfermagem.constraints.tipoAssistenciaEnfermagem.inList}" value="${questionarioenfermagem.tipoAssistenciaEnfermagem}" ></g:select>
+                                    <i class="fa fa-list"></i><g:select id="tipoAssistenciaEnfermagem" name="tipoAssistenciaEnfermagem" from="${questionarioenfermagem.constraints.tipoAssistenciaEnfermagem.inList}" value="${questionarioenfermagem.tipoAssistenciaEnfermagem}" noSelection="['':'- Editar Dados Questionário Enfermagem -']" ></g:select>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="posicaoColeta">Posicao Coleta:</label>
+                                    <label for="posicaoColeta"></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'posicaoColeta','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="posicaoColeta" name="posicaoColeta" from="${questionarioenfermagem.constraints.posicaoColeta.inList}" value="${questionarioenfermagem.posicaoColeta}" ></g:select>
+                                    <i class="fa fa-list"></i><g:select id="posicaoColeta" name="posicaoColeta" from="${questionarioenfermagem.constraints.posicaoColeta.inList}" value="${questionarioenfermagem.posicaoColeta}" noSelection="['':'- Posição Coleta: -']" ></g:select>
                                 </td>
                             </tr> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">
-                                    <label for="roncoColeta">Ronco Coleta:</label>
+                                    <label for="roncoColeta"></label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'roncoColeta','errors')}">
-                                    <i class="fa fa-list"></i><g:select id="roncoColeta" name="roncoColeta" from="${questionarioenfermagem.constraints.roncoColeta.inList}" value="${questionarioenfermagem.roncoColeta}" ></g:select>
+                                    <i class="fa fa-list"></i><g:select id="roncoColeta" name="roncoColeta" from="${questionarioenfermagem.constraints.roncoColeta.inList}" value="${questionarioenfermagem.roncoColeta}" noSelection="['':'- Ronco Coleta:: -']" ></g:select>
                                 </td>
                             </tr> 
                         
@@ -142,7 +140,7 @@
                                     <label for="interfaceutilizada">Interfaceutilizada:</label>
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionarioenfermagem,field:'interfaceutilizada','errors')}">
-                                    <g:select class="form-control" optionKey="id" from="${Interfaceutilizada.list()}" name="interfaceutilizada.id" value="${questionarioenfermagem?.interfaceutilizada?.id}" ></g:select> <a href="${createLinkTo(dir:'/interfaceutilizada/create')}">* Cadastrar Interfaceutilizada</a>
+                                    <g:select class="form-control" optionKey="id" from="${Interfaceutilizada.list()}" name="interfaceutilizada.id" value="${questionarioenfermagem?.interfaceutilizada?.id}" ></g:select> <a href="${createLinkTo(dir:'/interfaceutilizada/create')}">* Cadastrar Interface Utilizada</a>
                                 </td>
                             </tr> 
                         
