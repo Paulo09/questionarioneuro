@@ -221,7 +221,7 @@
                                             <g:textArea type="text" placeholder="Digite observacao " class="materialize-textarea" id="observacao" name="observacao" value="${fieldValue(bean:pesquisasatisfacao,field:'observacao')}"/>
 									        <label for="observacao"><font size="3"><b>Em que podemos melhorar?</b></font></label>
                                             <div class="buttons" align="center">
-                                                <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                                                <span class="button"><input  class="btn waves-effect waves-light teal lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
                                             </div>
                                     </p></div>
                                     </li>

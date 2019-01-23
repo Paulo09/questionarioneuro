@@ -128,8 +128,8 @@
                     </table>
                 </div>
                 <div class="buttons" align="center">
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar" onclick="return confirm('Deseja editar os dados?');" /></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar" onclick="return confirm('Deseja apagar os dados?');" /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" action="Update" value="Salvar"  /></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light blue lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" action="delete" value="Apagar"  /></span>
                 </div><br>
             </g:form>
         </div>

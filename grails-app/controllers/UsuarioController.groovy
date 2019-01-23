@@ -136,11 +136,6 @@ class UsuarioController {
 
     def show = {
         def usuario = Usuario.get( params.id )
-
-
-        InetAddress ia = InetAddress.getByName("PauloPC");
-            System.out.println(ia.getHostAddress());
-
         if(!usuario) {
             flash.message = "Usuario n�o encontrado id ${params.id}"
             redirect(action:list)

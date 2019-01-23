@@ -95,7 +95,7 @@
 		  <a href="#!name"><span class="white-text name">jCloud-Bpmn</span></a>
 		  <a href="#!email"><span class="white-text email">jcloudBpmn@jcloudbpmn.com</span></a>
 		</div></li>
-		<li><a class="collapsible-header waves-effect waves-teal active" href="usuario/${usuario.id}" target="_self"><i class="material-icons">cloud</i>${usuario}</a></li>
+		<li><a class="collapsible-header waves-effect waves-teal active" href="show/${usuario.id}" target="_self"><i class="material-icons">cloud</i>${usuario}</a></li>
 		<li><div class="divider"></div></li>
 		<li><a class="collapsible-header waves-effect waves-teal active" href="#!"><i class="material-icons">face</i>Editar Dados Usuário</a></li>
 		<li><div class="divider"></div></li>
@@ -104,7 +104,7 @@
 			  <i class="material-icons prefix">search</i>
 			  <input type="text" id="link" class="autocomplete">
 			  <label for="autocomplete-input">Buscar</label>
-			  <img align="right" src="https://chart.googleapis.com/chart?chs=150x200&cht=qr&chl=http://192.168.1.89:8080/teste/android/neuro.apk">
+			  <img align="right" src="https://chart.googleapis.com/chart?chs=150x200&cht=qr&chl=http://192.168.1.89:8080/teste/android/neuro.apk" title="Download: App Android"><li>App 1.0</li>
 			</div>
 		</div>
 	</ul>
