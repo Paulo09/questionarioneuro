@@ -93,7 +93,7 @@ class ConvenioController {
         def convenio = Convenio.get( params.id )
         if(convenio) {
             convenio.delete()
-            flash.message = "Convenio ${params.id} deleted"
+            flash.message = "Convenio ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -119,7 +119,7 @@ class ConvenioController {
         if(convenio) {
             convenio.properties = params
             if(!convenio.hasErrors() && convenio.save()) {
-                flash.message = "Convenio ${params.id} updated"
+                flash.message = "Convenio ${params.id} Editado com sucesso!"
                 redirect(action:show,id:convenio.id)
             }
             else {

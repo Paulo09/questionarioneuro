@@ -118,7 +118,7 @@ class PacienteController {
         if(paciente) {
             paciente.properties = params
             if(!paciente.hasErrors() && paciente.save()) {
-                flash.message = "Paciente ${params.id} updated"
+                flash.message = "Paciente ${params.id} Editado com Sucesso!"
                 redirect(action:show,id:paciente.id)
             }
             else {

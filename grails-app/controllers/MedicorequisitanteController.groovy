@@ -91,7 +91,7 @@ class MedicorequisitanteController {
         def medicorequisitante = Medicorequisitante.get( params.id )
         if(medicorequisitante) {
             medicorequisitante.delete()
-            flash.message = "Medicorequisitante ${params.id} deleted"
+            flash.message = "Medicorequisitante ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -117,7 +117,7 @@ class MedicorequisitanteController {
         if(medicorequisitante) {
             medicorequisitante.properties = params
             if(!medicorequisitante.hasErrors() && medicorequisitante.save()) {
-                flash.message = "Medicorequisitante ${params.id} updated"
+                flash.message = "Medicorequisitante ${params.id} Editado com sucesso!"
                 redirect(action:show,id:medicorequisitante.id)
             }
             else {

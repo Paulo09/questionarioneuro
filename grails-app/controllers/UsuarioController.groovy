@@ -147,7 +147,7 @@ class UsuarioController {
         def usuario = Usuario.get( params.id )
         if(usuario) {
             usuario.delete()
-            flash.message = "Usuario ${params.id} deleted"
+            flash.message = "Usuario ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -173,7 +173,7 @@ class UsuarioController {
         if(usuario) {
             usuario.properties = params
             if(!usuario.hasErrors() && usuario.save()) {
-                flash.message = "Usuario ${params.id} updated"
+                flash.message = "Usuario ${params.id} Editado com sucesso!"
                 redirect(action:show,id:usuario.id)
             }
             else {

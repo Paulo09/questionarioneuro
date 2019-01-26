@@ -93,7 +93,7 @@ class QuestionariovideoeegController {
         def questionariovideoeeg = Questionariovideoeeg.get( params.id )
 
         if(!questionariovideoeeg) {
-            flash.message = "Questionariovideoeeg n�o encontrado id ${params.id}"
+            flash.message = "Questionario video EEG não encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionariovideoeeg : questionariovideoeeg ] }
@@ -103,11 +103,11 @@ class QuestionariovideoeegController {
         def questionariovideoeeg = Questionariovideoeeg.get( params.id )
         if(questionariovideoeeg) {
             questionariovideoeeg.delete()
-            flash.message = "Questionariovideoeeg ${params.id} deleted"
+            flash.message = "Questionario video EEG ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
-            flash.message = "Questionariovideoeeg n�o encontrado id ${params.id}"
+            flash.message = "Questionario video EEG não encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -116,7 +116,7 @@ class QuestionariovideoeegController {
         def questionariovideoeeg = Questionariovideoeeg.get( params.id )
 
         if(!questionariovideoeeg) {
-            flash.message = "Questionariovideoeeg n�o encontrado id ${params.id}"
+            flash.message = "Questionario video EEG não encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -129,7 +129,7 @@ class QuestionariovideoeegController {
         if(questionariovideoeeg) {
             questionariovideoeeg.properties = params
             if(!questionariovideoeeg.hasErrors() && questionariovideoeeg.save()) {
-                flash.message = "Questionariovideoeeg ${params.id} updated"
+                flash.message = "Questionario video EEG ${params.id} Editado com sucesso!"
                 redirect(action:show,id:questionariovideoeeg.id)
             }
             else {
@@ -137,7 +137,7 @@ class QuestionariovideoeegController {
             }
         }
         else {
-            flash.message = "Questionariovideoeeg n�o encontrado id ${params.id}"
+            flash.message = "Questionario video EEG não encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }
@@ -151,7 +151,7 @@ class QuestionariovideoeegController {
     def save = {
         def questionariovideoeeg = new Questionariovideoeeg(params)
         if(!questionariovideoeeg.hasErrors() && questionariovideoeeg.save()) {
-            flash.message = "Questionariovideoeeg ${questionariovideoeeg.id} cadastrado"
+            flash.message = "Questionario video EEG ${questionariovideoeeg.id} cadastrado"
             redirect(action:show,id:questionariovideoeeg.id)
         }
         else {

@@ -67,7 +67,7 @@ class QuartoController {
         def quarto = Quarto.get( params.id )
         if(quarto) {
             quarto.delete()
-            flash.message = "Quarto ${params.id} deleted"
+            flash.message = "Quarto ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -93,7 +93,7 @@ class QuartoController {
         if(quarto) {
             quarto.properties = params
             if(!quarto.hasErrors() && quarto.save()) {
-                flash.message = "Quarto ${params.id} updated"
+                flash.message = "Quarto ${params.id} Editado com sucesso!"
                 redirect(action:show,id:quarto.id)
             }
             else {

@@ -64,7 +64,7 @@ class InterfaceutilizadaController {
         def interfaceutilizada = Interfaceutilizada.get( params.id )
         if(interfaceutilizada) {
             interfaceutilizada.delete()
-            flash.message = "Interfaceutilizada ${params.id} deleted"
+            flash.message = "Interfaceutilizada ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class InterfaceutilizadaController {
         if(interfaceutilizada) {
             interfaceutilizada.properties = params
             if(!interfaceutilizada.hasErrors() && interfaceutilizada.save()) {
-                flash.message = "Interfaceutilizada ${params.id} updated"
+                flash.message = "Interfaceutilizada ${params.id} Editado com sucesso!"
                 redirect(action:show,id:interfaceutilizada.id)
             }
             else {

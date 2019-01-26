@@ -94,7 +94,7 @@ class ResponsaveltecnicaController {
         def responsaveltecnica = Responsaveltecnica.get( params.id )
         if(responsaveltecnica) {
             responsaveltecnica.delete()
-            flash.message = "Responsaveltecnica ${params.id} deleted"
+            flash.message = "Responsaveltecnica ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -120,7 +120,7 @@ class ResponsaveltecnicaController {
         if(responsaveltecnica) {
             responsaveltecnica.properties = params
             if(!responsaveltecnica.hasErrors() && responsaveltecnica.save()) {
-                flash.message = "Responsaveltecnica ${params.id} updated"
+                flash.message = "Responsaveltecnica ${params.id} Editado com sucesso!"
                 redirect(action:show,id:responsaveltecnica.id)
             }
             else {

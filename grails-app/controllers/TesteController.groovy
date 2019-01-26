@@ -64,7 +64,7 @@ class TesteController {
         def teste = Teste.get( params.id )
         if(teste) {
             teste.delete()
-            flash.message = "Teste ${params.id} deleted"
+            flash.message = "Teste ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class TesteController {
         if(teste) {
             teste.properties = params
             if(!teste.hasErrors() && teste.save()) {
-                flash.message = "Teste ${params.id} updated"
+                flash.message = "Teste ${params.id} Editado com sucesso!"
                 redirect(action:show,id:teste.id)
             }
             else {

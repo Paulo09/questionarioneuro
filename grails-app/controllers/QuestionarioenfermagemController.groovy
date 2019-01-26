@@ -102,7 +102,7 @@ class QuestionarioenfermagemController {
         def questionarioenfermagem = Questionarioenfermagem.get( params.id )
         if(questionarioenfermagem) {
             questionarioenfermagem.delete()
-            flash.message = "Questionarioenfermagem ${params.id} deleted"
+            flash.message = "Questionarioenfermagem ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -128,7 +128,7 @@ class QuestionarioenfermagemController {
         if(questionarioenfermagem) {
             questionarioenfermagem.properties = params
             if(!questionarioenfermagem.hasErrors() && questionarioenfermagem.save()) {
-                flash.message = "Questionarioenfermagem ${params.id} updated"
+                flash.message = "Questionarioenfermagem ${params.id} Editado com sucesso!"
                 redirect(action:show,id:questionarioenfermagem.id)
             }
             else {

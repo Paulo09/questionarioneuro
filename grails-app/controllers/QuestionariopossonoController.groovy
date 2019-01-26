@@ -103,7 +103,7 @@ class QuestionariopossonoController {
         def questionariopossono = Questionariopossono.get( params.id )
         if(questionariopossono) {
             questionariopossono.delete()
-            flash.message = "Questionariopossono ${params.id} deleted"
+            flash.message = "Questionariopossono ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -129,7 +129,7 @@ class QuestionariopossonoController {
         if(questionariopossono) {
             questionariopossono.properties = params
             if(!questionariopossono.hasErrors() && questionariopossono.save()) {
-                flash.message = "Questionariopossono ${params.id} updated"
+                flash.message = "Questionariopossono ${params.id} Editado com sucesso!"
                 redirect(action:show,id:questionariopossono.id)
             }
             else {

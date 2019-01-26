@@ -64,7 +64,7 @@ class ExameController {
         def exame = Exame.get( params.id )
         if(exame) {
             exame.delete()
-            flash.message = "Exame ${params.id} deleted"
+            flash.message = "Exame ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class ExameController {
         if(exame) {
             exame.properties = params
             if(!exame.hasErrors() && exame.save()) {
-                flash.message = "Exame ${params.id} updated"
+                flash.message = "Exame ${params.id} Editado com sucesso!"
                 redirect(action:show,id:exame.id)
             }
             else {

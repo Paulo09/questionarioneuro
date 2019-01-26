@@ -92,7 +92,7 @@ class MedicoresponsavelController {
         def medicoresponsavel = Medicoresponsavel.get( params.id )
         if(medicoresponsavel) {
             medicoresponsavel.delete()
-            flash.message = "Medicoresponsavel ${params.id} deleted"
+            flash.message = "Medicoresponsavel ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {

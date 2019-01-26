@@ -64,7 +64,7 @@ class PesquisasatisfacaoController {
         def pesquisasatisfacao = Pesquisasatisfacao.get( params.id )
         if(pesquisasatisfacao) {
             pesquisasatisfacao.delete()
-            flash.message = "Pesquisasatisfacao ${params.id} deleted"
+            flash.message = "Pesquisasatisfacao ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class PesquisasatisfacaoController {
         if(pesquisasatisfacao) {
             pesquisasatisfacao.properties = params
             if(!pesquisasatisfacao.hasErrors() && pesquisasatisfacao.save()) {
-                flash.message = "Pesquisasatisfacao ${params.id} updated"
+                flash.message = "Pesquisasatisfacao ${params.id} Editado com sucesso!"
                 redirect(action:show,id:pesquisasatisfacao.id)
             }
             else {

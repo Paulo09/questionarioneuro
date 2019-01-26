@@ -64,7 +64,7 @@ class ProntuarioController {
         def prontuario = Prontuario.get( params.id )
         if(prontuario) {
             prontuario.delete()
-            flash.message = "Prontuario ${params.id} deleted"
+            flash.message = "Prontuario ${params.id} Deletado com Sucesso!"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class ProntuarioController {
         if(prontuario) {
             prontuario.properties = params
             if(!prontuario.hasErrors() && prontuario.save()) {
-                flash.message = "Prontuario ${params.id} updated"
+                flash.message = "Prontuario ${params.id} Editado com sucesso!"
                 redirect(action:show,id:prontuario.id)
             }
             else {
