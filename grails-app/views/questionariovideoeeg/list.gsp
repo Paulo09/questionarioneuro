@@ -4,7 +4,7 @@
     <head>
      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	 
+
 	  <!--Materilize embarcado-->
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <!--Import materialize.css-->
@@ -15,7 +15,7 @@
 	  <!--Materilize embarcado-->
         <title>Lista Questionariovideoeeg</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light  red lighten-2 z-depth-5">  
+	<nav class="nav-extended btn waves-effect waves-light  red lighten-2 z-depth-5">
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
@@ -24,12 +24,12 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">    
+	<body class="white lighten-2">
    	<div class="container" style="margin-top:40px;">
     <body>
-       
+
         <div class="body">
-            
+
 			<g:if test="${flash.message}">
 				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
             </g:if>
@@ -59,34 +59,34 @@
                 <table class="striped centered grey lighten-2 z-depth-5">
                     <thead>
                         <tr>
-                        
+
                    	        <g:sortableColumn property="id" title="Id" />
-                        
+
                    	        <g:sortableColumn property="paciente" title="Paciente" />
-                        
+
                    	        <g:sortableColumn property="problemaGravidezParto" title="Problema Gravidez Parto" />
-                        
+
                    	        <g:sortableColumn property="desenvolvimentoNormal" title="Desen Normal" />
-                        
+
                         </tr>
                     </thead>
                     <tbody>
                     <g:each in="${questionariovideoeegList}" status="i" var="questionariovideoeeg">
                         <tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
-                        
+
                             <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'id')}</g:link></td>
-                        
+
                             <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'paciente')}</g:link></td>
-                        
+
                             <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'problemaGravidezParto')}</g:link></td>
-                        
+
                             <td><g:link action="show" id="${questionariovideoeeg.id}">${fieldValue(bean:questionariovideoeeg, field:'desenvolvimentoNormal')}</g:link></td>
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light  red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
+			<nav class="nav-extended btn waves-effect waves-light  red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">
 				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Questionariovideoeeg.count()}"/></ul>
             </nav>
         </div>

@@ -64,7 +64,7 @@ class QuestionariopresonoController {
         def questionariopresono = Questionariopresono.get( params.id )
         if(questionariopresono) {
             questionariopresono.delete()
-            flash.message = "Questionariopresono ${params.id} Deletado com Sucesso!"
+            flash.message = "Questionariopresono ${params.id} deleted"
             redirect(action:list)
         }
         else {
@@ -90,7 +90,7 @@ class QuestionariopresonoController {
         if(questionariopresono) {
             questionariopresono.properties = params
             if(!questionariopresono.hasErrors() && questionariopresono.save()) {
-                flash.message = "Questionariopresono ${params.id} Editado com sucesso!"
+                flash.message = "Questionariopresono ${params.id} updated"
                 redirect(action:show,id:questionariopresono.id)
             }
             else {

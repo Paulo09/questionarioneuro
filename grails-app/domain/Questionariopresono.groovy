@@ -71,8 +71,8 @@ Quarto quarto
 Exame exame
 
 static constraints ={
-    jaFumou(blank:true,nullable:true) 
-    fuma(blank:true,nullable:true)	
+    jaFumou(blank:true,nullable:true)
+    fuma(blank:true,nullable:true)
 	tratamentoApineiaSono(inList:['Não','CPAP','Dispositivo Intraoral'])
     voceTem(inList:['Arritmia','Doença Pulmonar Crônica','Doença Cardiaca'])
     quantoTempodemoraDormir(inList:['0 a 30 minutos','30 minutos a 1 Hora','Mais de 1 Hora'])
