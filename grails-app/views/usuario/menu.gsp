@@ -120,7 +120,7 @@
 
 				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariovideoeeg.jpg);" >
-				<a href="/teste/questionariovideoeeg">
+				<a href="/teste/questionariovideoeeg2">
 				</div>
 					<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--white-600" >
 							<div>
@@ -142,13 +142,25 @@
 					</div>
 				</a>
 
-					<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopossono.jpg);" >
 				<a href="/teste/questionariopossono">
 				</div>
 					<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--white-1200" >
 							<div>
 							<strong><b>Questionário Pós-Sono</b></strong>
+							</div>
+						</div>
+					</div>
+				</a>
+
+				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopresono.jpg);" >
+				<a href="/teste/questionariopresono">
+				</div>
+					<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--white-1200" >
+							<div>
+							<strong><b>Questionário Video - Pré-Sono</b></strong>
 							</div>
 						</div>
 					</div>

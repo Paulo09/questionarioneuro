@@ -228,7 +228,7 @@
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'horaAbitualAcordar','errors')}">
-                                    <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite horaAbitualAcordar " id="horaAbitualAcordar" name="horaAbitualAcordar" size="50" value="${fieldValue(bean:questionariopresono,field:'horaAbitualAcordar')}"/>
+                                    <input type="text" class="form-control" size="50" placeholder="Digite horaAbitualAcordar " id="horaAbitualAcordar" name="horaAbitualAcordar" size="50" value="${fieldValue(bean:questionariopresono,field:'horaAbitualAcordar')}"/>
 									<label for="horaAbitualAcordar"><font size="3"><b>Hora Abitual Acordar</b></font></label>
                                 </td>
                             </tr>
@@ -381,7 +381,7 @@
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'voceRonca','errors')}">
                                     <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite voceRonca " id="voceRonca" name="voceRonca" size="50" value="${fieldValue(bean:questionariopresono,field:'voceRonca')}"/>
-									<label for="voceRonca"><font size="3"><b>Voce Ronca</b></font></label>
+									<label for="voceRonca"><font size="3"><b>Você Ronca</b></font></label>
                                 </td>
                             </tr>
 
@@ -401,7 +401,7 @@
                                 </td>
                             </tr>
 
-                             <tr class="prop" style="display:none">
+                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'exame','errors')}">
                                     <g:select class="form-control" optionKey="id" from="${Exame.list()}" name="exame.id" value="${questionariopresono?.exame?.id}" noSelection="['':'- Qual Exame? -']" ></g:select> <a href="${createLinkTo(dir:'/exame/create')}">* Cadastrar Exame</a>

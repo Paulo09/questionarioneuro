@@ -237,8 +237,8 @@
             <div class="buttons" align="center">
                 <g:form>
                     <input type="hidden" name="id" value="${questionariovideoeeg?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"   action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  action="Delete" value="Apagar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;"   action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2" style="padding:10px;margin:10px;size:30px;width:110px;"  action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

@@ -168,11 +168,11 @@
                                 </td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'frequenciaCriseAno','errors')}">
                                     <input type="text" class="form-control" size="50" placeholder="Digite frequenciaCriseAno " id="frequenciaCriseAno" name="frequenciaCriseAno" size="50" value="${fieldValue(bean:questionariovideoeeg,field:'frequenciaCriseAno')}"/>
-                                    <label><font size="3"><b>Frequência Crise Ano</b></font></label>
+                                    <label><font size="3"><b>Frequência Atual das Crises </b></font></label>
                                 </td>
                             </tr> 
                         
-                            <tr class="prop">
+                            <!--<tr class="prop">
                                 <td valign="top" class="name">
                                     <label for="frequenciaCriseDia"></label>
                                 </td>
@@ -200,7 +200,7 @@
                                     <input type="text" class="form-control" size="50" placeholder="Digite frequenciaCriseSemana " id="frequenciaCriseSemana" name="frequenciaCriseSemana" size="50" value="${fieldValue(bean:questionariovideoeeg,field:'frequenciaCriseSemana')}"/>
                                     <label><font size="3"><b>Frequencia Crise Semana</b></font></label>
                                 </td>
-                            </tr> 
+                            </tr>--> 
                         
                             <tr class="prop">
                                 <td valign="top" class="name">

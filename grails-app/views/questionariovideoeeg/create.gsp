@@ -169,7 +169,7 @@
                                         </td>
                                     </tr>
 
-                                    <tr class="prop">
+                                    <!--<tr class="prop">
                                         <td valign="top" class="name"></td>
                                         <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg,field:'frequenciaCriseDia','errors')}">
                                             <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite frequenciaCriseDia " id="frequenciaCriseDia" name="frequenciaCriseDia" size="50" value="${fieldValue(bean:questionariovideoeeg,field:'frequenciaCriseDia')}"/>
@@ -191,7 +191,7 @@
                                             <i class="fa fa-text-width"></i><input type="text" class="form-control" size="50" placeholder="Digite frequenciaCriseSemana " id="frequenciaCriseSemana" name="frequenciaCriseSemana" size="50" value="${fieldValue(bean:questionariovideoeeg,field:'frequenciaCriseSemana')}"/>
                                             <label for="frequenciaCriseSemana"><font size="3"><b>Frequencia Crise Semana</b></font></label>
                                         </td>
-                                    </tr>
+                                    </tr>-->
                             </div>
 
                             <div id="perguntas22a29">

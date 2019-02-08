@@ -69,15 +69,15 @@
 
                             <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'id')}</g:link></td>
 
-                            <td>${fieldValue(bean:questionariopresono, field:'jaFumou')}</td>
+                            <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'jaFumou')}</g:link></td>
 
-                            <td>${fieldValue(bean:questionariopresono, field:'fuma')}</td>
+                            <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'fuma')}</g:link></td>
 
-                            <td>${fieldValue(bean:questionariopresono, field:'tratamentoApineiaSono')}</td>
+                            <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'tratamentoApineiaSono')}</g:link></td>
 
-                            <td>${fieldValue(bean:questionariopresono, field:'voceTem')}</td>
+                            <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'voceTem')}</g:link></td>
 
-                            <td>${fieldValue(bean:questionariopresono, field:'quantoTempodemoraDormir')}</td>
+                            <td><g:link action="show" id="${questionariopresono.id}">${fieldValue(bean:questionariopresono, field:'quantoTempodemoraDormir')}</g:link></td>
 
                         </tr>
                     </g:each>

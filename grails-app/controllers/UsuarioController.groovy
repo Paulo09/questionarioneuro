@@ -9,7 +9,9 @@ class UsuarioController {
 	////           @Paulo Castro v4                            ////            
 	///////////////////////////////////////////////////////////////
     
-    def index = { redirect(action:list,params:params) }
+    def index = { 
+        redirect(action:list,params:params) 
+    }
 
     def listar = {
         def objJson = Usuario.list() ?: []
