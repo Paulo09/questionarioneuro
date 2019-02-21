@@ -1,8 +1,10 @@
+
+
 <html>
     <head>
      <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-
+	 
 	  <!--Materilize embarcado-->
 	  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	  <!--Import materialize.css-->
@@ -11,50 +13,31 @@
 	  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 	  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 	  <!--Materilize embarcado-->
-        <title>Lista Questionariovideoeeg</title>
+        <title>Lista Questionariovideoeeg2</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light  red lighten-2 z-depth-5">
+	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/barraMenu',file:'barraMenu.jpg')});">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="/teste/usuario/menu" target="_self">Voltar</a></li>
-			<li class="tab  disabled"><a class="active">Listar</a></li>
-			<li class="tab"><a href="create" target="_self">Novo</a></li>
+			<li class="tab"><a href="#test1">Sair</a></li>
+			<li class="tab"><a class="active" href="#test2">Menu</a></li>
+			<li class="tab disabled"><a href="#test3">Buscar</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">
+	<body class="teal lighten-2">    
    	<div class="container" style="margin-top:40px;">
-    <body>
-
+    <body style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+        <div class="card">
+		  <div class="card-image">
+		  <img src="${createLinkTo(dir:'images/view/list/backgroundCard',file:'backgroundCard.jpg')}">
+		  <span class="card-title"><b>L</b>ista <b>Questionariovideoeeg2</b></span>
+		</div>
         <div class="body">
-
-			<g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light">${flash.message}</nav>
+             <g:if test="${flash.message}">
+				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/message',file:'message.jpg')});">${flash.message}</nav>
             </g:if>
-
-			<g:form action="buscar" method="post" class="questionariovideoeeg">
-				<div class="list">
-					<div class="input-field col s8 ">
-					<input type="text" id="nome" name="nome" ><br/>
-					<label for="icon_telephone">Buscar: Id questionário Video EEG</label>
-				</div>
-				</div>
-				<div class="buttons" align="center">
-					<span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Buscar"/></span>
-				</div><br>
-			</g:form>
-
-            	<div class="list">
-				<div class="card z-depth-5">
-				<div class="card-image"></div>
-				<div class="body">
-
-				<div class="list">
-					<div class="card-content red lighten-2">
-					<h4 align="center" class="white-text">Listar Questionário(s)</h4>
-				</div>
-
-                <table class="striped centered grey lighten-2 z-depth-5">
+            <div class="list">
+                <table class="striped centered grey lighten-2">
                     <thead>
                         <tr>
                         
@@ -78,22 +61,22 @@
                         
                             <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'id')}</g:link></td>
                         
-                            <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'paisParentes')}</g:link></td>
+                            <td>${fieldValue(bean:questionariovideoeeg2, field:'paisParentes')}</td>
                         
-                            <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'problemaGravidezParto')}</g:link></td>
+                            <td>${fieldValue(bean:questionariovideoeeg2, field:'problemaGravidezParto')}</td>
                         
-                            <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'frequentaescola')}</g:link></td>
+                            <td>${fieldValue(bean:questionariovideoeeg2, field:'frequentaescola')}</td>
                         
-                            <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'convulcaocomFebreInfancia')}</g:link></td>
+                            <td>${fieldValue(bean:questionariovideoeeg2, field:'convulcaocomFebreInfancia')}</td>
                         
-                            <td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'anosAndou')}</g:link></td>
+                            <td>${fieldValue(bean:questionariovideoeeg2, field:'anosAndou')}</td>
                         
                         </tr>
                     </g:each>
                     </tbody>
                 </table>
             </div>
-			<nav class="nav-extended btn waves-effect waves-light red lighten-2" >  
+			<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/list/backgroundPagina',file:'backgroundPagina.jpg')});">  
 				 <ul class="pagination" align="center"><li class="active" style="background-image:url(${createLinkTo(dir:'images/view/list/paginacao',file:'paginacao.jpg')});"><g:paginate total="${Questionariovideoeeg2.count()}"/></ul>
             </nav>
         </div>

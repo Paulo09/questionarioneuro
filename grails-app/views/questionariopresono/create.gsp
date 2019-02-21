@@ -47,6 +47,14 @@
                                 <h4 align="center" class="white-text">Questionário Video - Pré-Sono</h4>
                             </div>
 
+                             <tr class="prop">
+                                <td valign="top" class="name"></td>
+                                <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'paciente','errors')}">
+                                    <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariopresono?.paciente?.id}" noSelection="['':'- Paciente -']" ></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
+                                    <label for="paciente"><font size="3"><b></b></font></label>
+                                </td>
+                            </tr>
+
 
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
@@ -281,13 +289,6 @@
                                 </td>
                             </tr>
 
-                            <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'paciente','errors')}">
-                                    <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariopresono?.paciente?.id}" noSelection="['':'- Paciente? -']" ></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
-									<label for="paciente"><font size="3"><b></b></font></label>
-                                </td>
-                            </tr>
 
                             <tr class="prop">
                                 <td valign="top" class="name"></td>

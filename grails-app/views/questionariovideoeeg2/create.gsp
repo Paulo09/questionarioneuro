@@ -12,12 +12,12 @@
 		  <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
 
-        <title>Cadastrar Questionariovideoeeg</title>
+        <title>Cadastrar Questionário Vídeo EEG</title>
     </head>
 	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="list" target="_self">Voltar</a></li>
+			<li class="tab"><a href="/teste/questionariovideoeeg2/list" target="_self">Voltar</a></li>
 			<li class="tab"><a class="active">Novo</a></li>
 		  </ul>
 		</div>
@@ -40,7 +40,7 @@
 
                         <div class="card">
                             <div class="card-content red lighten-2 z-depth-5">
-                                <h4 align="center" class="white-text">Questionário Video - EGG</h4>
+                                <h4 align="center" class="white-text">Questionário Vídeo - EGG</h4>
                             </div>
                             <div class="card-tabs z-depth-5">
                                 <ul class="tabs tabs-fixed-width grey lighten-4">&nbsp;<div class="red-text lighten-2"></div>
@@ -49,9 +49,7 @@
                                     <li class="tab"><a href="#perguntas22a29"><b>22 a 29</b></a></li>
                                 </ul>
                             </div>
-                            <div class="card-content grey lighten-4"> 
-
-                             
+                            <div class="card-content grey lighten-4">
 
                         <div id="perguntas1a10">
 
@@ -77,14 +75,23 @@
                                             <g:select class="form-control" optionKey="id" from="${Medicoresponsavel.list()}" name="medicoResponsavel.id" value="${questionariovideoeeg2?.medicoResponsavel?.id}" noSelection="['':'- Médico Responsável -']" ></g:select> <a href="${createLinkTo(dir:'/medicoResponsavel/create')}">* Cadastrar Medicoresponsavel</a>
                                             <label for="medicoResponsavel"><font size="3"><b></b></font></label>
                                         </td>
-                                    </tr>
+                                </tr>
+
+                                <tr class="prop">
+                                    <td valign="top" class="name"></td>
+                                    <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'responsaveltecnica','errors')}">
+                                        <g:select class="form-control" optionKey="id" from="${Responsaveltecnica.list()}" name="responsaveltecnica.id" value="${questionariovideoeeg2?.responsaveltecnica?.id}" noSelection="['':'- Responsável Técnica -']" ></g:select> <a href="${createLinkTo(dir:'/responsaveltecnica/create')}">* Cadastrar Responsaveltecnica</a>
+                                        <label for="responsaveltecnica"><font size="3"><b></b></font></label>
+                                    </td>
+                                </tr>
+
                                 <tr class="prop">
                                     <td valign="top" class="name"></td>
                                     <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'convenio','errors')}">
                                         <g:select class="form-control" optionKey="id" from="${Convenio.list()}" name="convenio.id" value="${questionariovideoeeg2?.convenio?.id}" noSelection="['':'- Convênio -']" ></g:select> <a href="${createLinkTo(dir:'/convenio/create')}">* Cadastrar Convenio</a>
                                         <label for="convenio"><font size="3"></font></label>
                                     </td>
-                                </tr>    
+                                </tr>
 
 
                             <tr class="prop">
@@ -135,7 +142,7 @@
                                 </td>
                             </tr>
 
-                            
+
 
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
@@ -145,12 +152,12 @@
                                 </td>
                             </tr>
 
-                           
-                    </div><!-- Fim 1 -->    
 
-                    <div id="perguntas11a21">       
+                    </div><!-- Fim 1 -->
 
-                            <tr class="prop" style="display:none">
+                    <div id="perguntas11a21">
+
+                            <tr class="prop" style="Display:none">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'dtExame','errors')}">
                                     <input name="dtExame" class="form-control" data-clear-btn-text="Limpar Dt Exame"  data-clear-btn="true" value="${String.format('%td/%<tm/%<tY',questionariovideoeeg2?.dtExame)}" ></input>
@@ -182,7 +189,7 @@
                                 </td>
                             </tr>
 
-                          
+
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'qualproblemaGravidezParto','errors')}">
@@ -200,7 +207,7 @@
                             </tr>
                     </div><!-- Fim 2 -->
 
-                    <div id="perguntas22a29"> 
+                    <div id="perguntas22a29">
 
                              <tr class="prop">
                                 <td valign="top" class="name"></td>
@@ -256,7 +263,7 @@
 									<label for="nomeMedicacao6"><font size="3"><b>Nome Medicacao6</b></font></label>
                                 </td>
                             </tr>
-                           
+
 
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
@@ -281,7 +288,7 @@
 									<label for="dosagemMedicamento5"><font size="3"><b>Dosagem Medicamento5</b></font></label>
                                 </td>
                             </tr>
-                        
+
                             <tr class="prop">
                                 <td valign="top" class="name"></td>
                                 <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'dosagemMedicamento6','errors')}">
@@ -315,22 +322,16 @@
                                 </td>
                             </tr>
 
-                             <tr class="prop">
-                                <td valign="top" class="name"></td>
-                                <td valign="top" class="value ${hasErrors(bean:questionariovideoeeg2,field:'responsaveltecnica','errors')}">
-                                    <g:select class="form-control" optionKey="id" from="${Responsaveltecnica.list()}" name="responsaveltecnica.id" value="${questionariovideoeeg2?.responsaveltecnica?.id}" noSelection="['':'- Responsável Técnica -']" ></g:select> <a href="${createLinkTo(dir:'/responsaveltecnica/create')}">* Cadastrar Responsaveltecnica</a>
-									<label for="responsaveltecnica"><font size="3"><b></b></font></label>
-                                </td>
-                            </tr>
-                           
+                            <div class="buttons" align="center">
+                                <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
+                            </div><br>
+
 
                         </tbody>
                     </table>
                 </div>
-	            <div class="buttons" align="center">
-                    <span class="button"><input  class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;" type="submit" value="Salvar"/></span>
-                </div><br>
-             </div><!-- Fim 3 -->    
+
+             </div><!-- Fim 3 -->
             </g:form>
         </div>
 		   <!--Import jQuery before materialize.js-->

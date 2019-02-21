@@ -4,9 +4,9 @@ class PacienteController {
 
 	///////////////////////////////////////////////////////////////
     ////           API - RESTFULL - jRestFull-API 1.4          ////
-	////           @Paulo Castro v4                            ////            
+	////           @Paulo Castro v4                            ////
 	///////////////////////////////////////////////////////////////
-    
+
     def index = { redirect(action:list,params:params) }
 
     def listar = {
@@ -23,8 +23,8 @@ class PacienteController {
         }
 	    else{render objJson as JSON}
     }
-	
-	  def deletar = {	
+
+	  def deletar = {
 		if(Paciente.findById(request.JSON.id)){
 		Paciente.get(request.JSON.id)?.delete()
 		render "Paciente Id:${request.JSON.id} Deletado com sucesso!"}
@@ -33,25 +33,25 @@ class PacienteController {
 
     def editar = {
         Paciente c = Paciente.get(request.JSON.id)
-		c.properties = request.JSON	
-		if(c.save()){render "Paciente Id:${c.id} - Editado com sucesso!!" 
+		c.properties = request.JSON
+		if(c.save()){render "Paciente Id:${c.id} - Editado com sucesso!!"
 		}else{render "Erro: Id: ${c.id} nao encontrado!"}
     }
 
     def salvar = {
          def paciente = new Paciente(request.JSON)
 		if(paciente.save()){
-			render "Paciente Id:${paciente.id} - Salvo com sucesso!" 
-		}else{render "Erro: Paciente nao foi salvo!"}	    
+			render "Paciente Id:${paciente.id} - Salvo com sucesso!"
+		}else{render "Erro: Paciente nao foi salvo!"}
     }
 
     def buscar ={
-	     		
+
         def buscaSingular=""
         def buscaGeral=""
 
         if(params.nome==""){redirect(action:list)}
-	
+
 		if(params.nome)
 		{
 			buscaSingular = Paciente.findAllByNomeLike("%"+params.nome+"%")
@@ -60,19 +60,19 @@ class PacienteController {
 			}
             else{
                 flash.message = "Paciente: ${params.nome}, não cadastrado!"
-		        redirect(action:buscar)  
+		        redirect(action:buscar)
             }
 		}
-		else { 
+		else {
             if(params.nome!=null){
                 if(!params.max) params.max = 10
                 buscaGeral = Paciente.findAll()
                 return [ pacienteList: buscaGeral ]
             }
 		}
-    }    
+    }
 
-   
+
     def list = {
         if(!params.max) params.max = 10
         [ pacienteList: Paciente.list( params ) ]

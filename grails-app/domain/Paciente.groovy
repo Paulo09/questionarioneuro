@@ -9,11 +9,14 @@ String sexo
 String dataNascimento
 String observacao
 
+  static hasMany = [questionarioenfermagem:Questionarioenfermagem,questionariopresono:Questionariopresono]
+
+
 	String toString() {
 		"${this.nome}"
 	}
-	
-	static constraints ={	
+
+	static constraints ={
 		 sexo(inList:['Masculino','Feminino'])
 		 nivelEscolaridade(inList:['Alfabetização','Fundamental','Médio','Técnico','Superior','Pós-Graduação','Mestrado','Doutorado'])
 	 }

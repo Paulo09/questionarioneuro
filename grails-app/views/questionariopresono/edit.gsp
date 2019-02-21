@@ -40,7 +40,7 @@
             <g:form method="post" >
                 <input type="hidden" name="id" value="${questionariopresono?.id}" />
                 <div class="dialog">
-                    
+
                     <div class="list">
                         <div class="card-content red lighten-2">
                         <h4 align="center" class="white-text">Editar Dados Questionario Pré-Sono</h4>
@@ -48,6 +48,15 @@
 
                     <table class="striped left grey lighten-2">
                         <tbody>
+
+                            <tr class="prop">
+                                <td valign="top" class="name">
+                                    <label for="paciente"></label>
+                                </td>
+                                <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'paciente','errors')}">
+                                    <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariopresono?.paciente?.id}" noSelection="['':'- Paciente -']"></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
+                                </td>
+                            </tr>
 
                             <tr class="prop">
                                 <td valign="top" class="name">
@@ -345,14 +354,7 @@
                                 </td>
                             </tr>
 
-                            <tr class="prop">
-                                <td valign="top" class="name">
-                                    <label for="paciente"></label>
-                                </td>
-                                <td valign="top" class="value ${hasErrors(bean:questionariopresono,field:'paciente','errors')}">
-                                    <g:select class="form-control" optionKey="id" from="${Paciente.list()}" name="paciente.id" value="${questionariopresono?.paciente?.id}" noSelection="['':'- Paciente -']"></g:select> <a href="${createLinkTo(dir:'/paciente/create')}">* Cadastrar Paciente</a>
-                                </td>
-                            </tr>
+
 
                             <tr class="prop">
                                 <td valign="top" class="name">

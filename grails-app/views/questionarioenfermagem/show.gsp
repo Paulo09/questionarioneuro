@@ -4,7 +4,7 @@
     <head>
 		 <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.0/css/materialize.min.css"/>
 	     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-		 
+
 		  <!--Materilize embarcado-->
 	      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 	      <!--Import materialize.css-->
@@ -13,10 +13,10 @@
 	      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
    	      <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
-		  
+
         <title>Dados Questionarioenfermagem</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
+	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
 			<li class="tab"><a href="/teste/questionarioenfermagem/list" target="_self">Voltar</a></li>
@@ -24,10 +24,10 @@
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">   
+	<body class="white lighten-2">
 	<div class="container" style="margin-top:40px;">
     <body>
-         <div class="card z-depth-5"><div class="card-image"></div>		
+         <div class="card z-depth-5"><div class="card-image"></div>
         <div class="body">
             <g:if test="${flash.message}">
 				<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">${flash.message}</nav>
@@ -40,105 +40,112 @@
                             <h4 align="center" class="white-text">Questionário Enfermagem</h4>
                         </div>
 
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Id:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'id')}</td>
-                            
+
                         </tr>
-                    
+
+                        <tr class="prop">
+                            <td valign="top" class="name"><b>Paciente:</td>
+
+                            <td valign="top" class="value"><g:link controller="paciente" action="show" id="${questionarioenfermagem?.paciente?.id}">${questionarioenfermagem?.paciente?.encodeAsHTML()}</g:link></td>
+
+                        </tr>
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Tipo Assistencia Enfermagem:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'tipoAssistenciaEnfermagem')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Posicao Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'posicaoColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Ronco Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'roncoColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Anotacoes Enfermagem:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'anotacoesEnfermagem')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Ao Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'aoColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Epap Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'epapColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Eventos Exame:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'eventosExame')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Fuga Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'fugaColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Hipo Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'hipoColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Hora Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'horaColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Interfaceutilizada:</td>
-                            
+
                             <td valign="top" class="value"><g:link controller="interfaceutilizada" action="show" id="${questionarioenfermagem?.interfaceutilizada?.id}">${questionarioenfermagem?.interfaceutilizada?.encodeAsHTML()}</g:link></td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Ipap Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'ipapColeta')}</td>
-                            
+
                         </tr>
-                    
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Sao2 Coleta:</td>
-                            
+
                             <td valign="top" class="value">${fieldValue(bean:questionarioenfermagem, field:'sao2Coleta')}</td>
-                            
+
                         </tr>
-                    
+
                     </tbody>
                 </table>
             </div>

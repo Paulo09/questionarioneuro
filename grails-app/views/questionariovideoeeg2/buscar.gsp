@@ -74,7 +74,7 @@
 							</tr>
 						</thead>
 						<tbody>
-						<g:each in="${questionariovideoeeg2List}" status="i" var="questionariovideoeeg">
+						<g:each in="${questionariovideoeeg2List}" status="i" var="questionariovideoeeg2">
 							<tr class="${(i % 2) == 0 ? 'odd' : 'even'}">
 							
 								<td><g:link action="show" id="${questionariovideoeeg2.id}">${fieldValue(bean:questionariovideoeeg2, field:'id')}</g:link></td>

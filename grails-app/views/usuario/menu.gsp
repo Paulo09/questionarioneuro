@@ -109,10 +109,6 @@
 		</div>
 	</ul>
 
-
-
-
-
     <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
       <main class="mdl-layout__content">
         <div class="demo-blog__posts mdl-grid">
@@ -165,10 +161,7 @@
 						</div>
 					</div>
 				</a>
-
-
-
-
+				
 		  <div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/pesquisaSatisfacao.jpg);" >
 			<a href="/teste/pesquisasatisfacao/list">

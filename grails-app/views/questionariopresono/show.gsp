@@ -55,6 +55,13 @@
 
                         </tr>
 
+                         <tr class="prop">
+                            <td valign="top" class="name"><b>Paciente:</td>
+
+                            <td valign="top" class="value"><g:link controller="paciente" action="show" id="${questionariopresono?.paciente?.id}">${questionariopresono?.paciente?.encodeAsHTML()}</g:link></td>
+
+                        </tr>
+
                         <tr class="prop">
                             <td valign="top" class="name"><b>Ja Fumou:</td>
 

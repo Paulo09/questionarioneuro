@@ -62,7 +62,9 @@ String dtExame
 
 Date dtCadastro = new Date()
 
+static belongsTo = Paciente
 Paciente paciente
+
 Medicorequisitante medicoRequisitante
 Responsaveltecnica responsaveltecnica
 Medicoresponsavel medicoResponsavel

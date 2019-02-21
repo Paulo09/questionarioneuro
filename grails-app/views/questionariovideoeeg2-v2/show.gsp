@@ -14,239 +14,239 @@
    	      <link rel="stylesheet" href="${createLinkTo(dir:'css',file:'materialize.css')}"/>
 		  <!--Materilize embarcado-->
 		  
-        <title>Dados Questionariovideoeeg</title>
+        <title>Dados Questionariovideoeeg2</title>
     </head>
-	<nav class="nav-extended btn waves-effect waves-light red lighten-2 z-depth-5">  
+	<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/barraMenu',file:'barraMenu.jpg')});">  
 		<div class="nav-content">
 		  <ul class="tabs tabs-transparent">
-			<li class="tab"><a href="/teste/questionariovideoeeg2/list" target="_self">Voltar</a></li>
-			<li class="tab  disabled"><a class="active">Listar</a></li>
-			<li class="tab"><a href="/teste/questionariovideoeeg2/create" target="_self">Novo</a></li>
+			<li class="tab"><a href="#test1">Sair</a></li>
+			<li class="tab"><a class="active" href="#test2">Menu</a></li>
+			<li class="tab disabled"><a href="#test3">Buscar</a></li>
 		  </ul>
 		</div>
 	</nav>
-	<body class="white lighten-2">   
+	<body class="teal lighten-2">   
 	<div class="container" style="margin-top:40px;">
-    <body>
-        <div class="card z-depth-5"><div class="card-image"></div>		
+    <body style="background-image:url(${createLinkTo(dir:'images/view/show/backgroundPagina',file:'backgroundPagina.jpg')});background-repeat:no-repeat;background-size:cover;">
+        <div class="card">
+		  <div class="card-image">
+		  <img src="${createLinkTo(dir:'images/view/show/backgroundCard',file:'backgroundCard.jpg')}">
+		  <span class="card-title"><b>D</b>ados <b>Questionariovideoeeg2</b></span>
+		</div>		
         <div class="body">
             <g:if test="${flash.message}">
-				<nav class="nav-extended btn waves-effect waves-light blue lighten-2 z-depth-5">${flash.message}</nav>
+				<nav class="nav-extended btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/message',file:'message.jpg')});">${flash.message}</nav>
             </g:if>
             <div class="dialog">
-                <table class="striped left grey lighten-2">
+                <table class="striped centered">
                     <tbody>
-
-                        <div class="card-content red lighten-2">
-                                <h4 align="center" class="white-text">Dados Questionário Video - EGG</h4>
-                        </div>
 
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Id:</td>
+                            <td valign="top" class="name">Id:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'id')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Pais Parentes:</td>
+                            <td valign="top" class="name">Pais Parentes:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'paisParentes')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Problema Gravidez Parto:</td>
+                            <td valign="top" class="name">Problema Gravidez Parto:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'problemaGravidezParto')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Frequenta (ou) escola Normal:</td>
+                            <td valign="top" class="name">Frequentaescola:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'frequentaescola')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Convulção com Febre Infância:</td>
+                            <td valign="top" class="name">Convulcaocom Febre Infancia:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'convulcaocomFebreInfancia')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Quantos Anos Andou:</td>
+                            <td valign="top" class="name">Anos Andou:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'anosAndou')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Quantos Anos Falou:</td>
+                            <td valign="top" class="name">Anos Falou:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'anosFalou')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Convênio:</td>
+                            <td valign="top" class="name">Convenio:</td>
                             
                             <td valign="top" class="value"><g:link controller="convenio" action="show" id="${questionariovideoeeg2?.convenio?.id}">${questionariovideoeeg2?.convenio?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Descrição Eventos:</td>
+                            <td valign="top" class="name">Descricao Eventos:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'descricaoEventos')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Descrição Sintomas Crise Testemunha:</td>
+                            <td valign="top" class="name">Descricao Sintomas Crise Testemunha:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'descricaoSintomasCriseTestemunha')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Diagnóstico Enfermagem:</td>
+                            <td valign="top" class="name">Diagnostico Enfermagem:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'diagnosticoEnfermagem')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 1:</td>
+                            <td valign="top" class="name">Dosagem Medicamento1:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento1')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 2:</td>
+                            <td valign="top" class="name">Dosagem Medicamento2:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento2')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 3:</td>
+                            <td valign="top" class="name">Dosagem Medicamento3:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento3')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 4:</td>
+                            <td valign="top" class="name">Dosagem Medicamento4:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento4')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 5:</td>
+                            <td valign="top" class="name">Dosagem Medicamento5:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento5')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Dosagem Medicamento 6:</td>
+                            <td valign="top" class="name">Dosagem Medicamento6:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dosagemMedicamento6')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Data do Exame:</td>
+                            <td valign="top" class="name">Dt Exame:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'dtExame')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Frequencia Atual Crise:</td>
+                            <td valign="top" class="name">Frequencia Atual Crise:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'frequenciaAtualCrise')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Idade Crise Epiletptica Anos:</td>
+                            <td valign="top" class="name">Idade Crise Epiletptica Anos:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'idadeCriseEpiletpticaAnos')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Idade Crise Epiletptica Meses:</td>
+                            <td valign="top" class="name">Idade Crise Epiletptica Meses:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'idadeCriseEpiletpticaMeses')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Intervencao Enfermagem:</td>
+                            <td valign="top" class="name">Intervencao Enfermagem:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'intervencaoEnfermagem')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Médico Requisitante:</td>
+                            <td valign="top" class="name">Medico Requisitante:</td>
                             
                             <td valign="top" class="value"><g:link controller="medicorequisitante" action="show" id="${questionariovideoeeg2?.medicoRequisitante?.id}">${questionariovideoeeg2?.medicoRequisitante?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Médico Responsável:</td>
+                            <td valign="top" class="name">Medico Responsavel:</td>
                             
                             <td valign="top" class="value"><g:link controller="medicoresponsavel" action="show" id="${questionariovideoeeg2?.medicoResponsavel?.id}">${questionariovideoeeg2?.medicoResponsavel?.encodeAsHTML()}</g:link></td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Nome Medicação 1:</td>
+                            <td valign="top" class="name">Nome Medicacao1:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao1')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name"><b>Nome Medicação 2:</td>
+                            <td valign="top" class="name">Nome Medicacao2:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao2')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Nome Medicação 3:</td>
+                            <td valign="top" class="name">Nome Medicacao3:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao3')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Nome Medicação 4:</td>
+                            <td valign="top" class="name">Nome Medicacao4:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao4')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Nome Medicação 5:</td>
+                            <td valign="top" class="name">Nome Medicacao5:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao5')}</td>
                             
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Nome Medicação 6:</td>
+                            <td valign="top" class="name">Nome Medicacao6:</td>
                             
                             <td valign="top" class="value">${fieldValue(bean:questionariovideoeeg2, field:'nomeMedicacao6')}</td>
                             
@@ -267,7 +267,7 @@
                         </tr>
                     
                         <tr class="prop">
-                            <td valign="top" class="name">Responsável Técnica:</td>
+                            <td valign="top" class="name">Responsaveltecnica:</td>
                             
                             <td valign="top" class="value"><g:link controller="responsaveltecnica" action="show" id="${questionariovideoeeg2?.responsaveltecnica?.id}">${questionariovideoeeg2?.responsaveltecnica?.encodeAsHTML()}</g:link></td>
                             
@@ -279,8 +279,8 @@
             <div class="buttons" align="center"><br>
                 <g:form>
                     <input type="hidden" name="id" value="${questionariovideoeeg2?.id}" />
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;"  action="Edit"   value="Editar"/></span>
-                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light red lighten-2 z-depth-5" style="padding:10px;margin:10px;size:30px;width:110px;"  action="Delete" value="Apagar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoEditar.jpg')});padding:10px;margin:10px;size:30px;width:110px;"  onclick="return confirm('Deseja Editar os dados?');" action="Edit"   value="Editar"/></span>
+                    <span class="button"><g:actionSubmit class="btn waves-effect waves-light" style="background-image:url(${createLinkTo(dir:'images/view/show/botao',file:'botaoDeletar.jpg')});padding:10px;margin:10px;size:30px;width:110px;" onclick="return confirm('Deseja apagar os dados?');" action="Delete" value="Apagar"/></span>
                 </g:form>
             </div><br>
         </div>

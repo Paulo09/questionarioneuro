@@ -1,4 +1,4 @@
-class Questionarioenfermagem {
+class Questionarioenfermagem2 {
 
     String tipoAssistenciaEnfermagem
     String horaColeta
@@ -12,10 +12,12 @@ class Questionarioenfermagem {
     String hipoColeta
     String eventosExame
 
-    String anotacoesEnfermagem
 
     static belongsTo = Paciente
     Paciente paciente
+
+
+    String anotacoesEnfermagem
 
     Interfaceutilizada interfaceutilizada
 
@@ -25,5 +27,6 @@ class Questionarioenfermagem {
         posicaoColeta(inList:['DD - Decúbito Dorsal','DLD - Decúbito Lateral Direito','DLE - Decúbito Lateral Esquerdo','DV - Decúbito Ventral'])
         roncoColeta(inList:['0 - Ausente','1 - Leve','2 - Moderado','3 - Intenso'])
      }
+
 
 }
