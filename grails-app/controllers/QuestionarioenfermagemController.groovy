@@ -4,9 +4,9 @@ class QuestionarioenfermagemController {
 
 	///////////////////////////////////////////////////////////////
     ////           API - RESTFULL - jRestFull-API 1.4          ////
-	////           @Paulo Castro v4                            ////            
+	////           @Paulo Castro v4                            ////
 	///////////////////////////////////////////////////////////////
-    
+
     def index = { redirect(action:list,params:params) }
 
     def listar = {
@@ -23,8 +23,8 @@ class QuestionarioenfermagemController {
         }
 	    else{render objJson as JSON}
     }
-	
-	  def deletar = {	
+
+	  def deletar = {
 		if(Questionarioenfermagem.findById(request.JSON.id)){
 		Questionarioenfermagem.get(request.JSON.id)?.delete()
 		render "Questionarioenfermagem Id:${request.JSON.id} Deletado com sucesso!"}
@@ -33,56 +33,54 @@ class QuestionarioenfermagemController {
 
     def editar = {
         Questionarioenfermagem c = Questionarioenfermagem.get(request.JSON.id)
-		c.properties = request.JSON	
-		if(c.save()){render "Questionarioenfermagem Id:${c.id} - Editado com sucesso!!" 
+		c.properties = request.JSON
+		if(c.save()){render "Questionarioenfermagem Id:${c.id} - Editado com sucesso!!"
 		}else{render "Erro: Id: ${c.id} nao encontrado!"}
     }
 
     def salvar = {
          def questionarioenfermagem = new Questionarioenfermagem(request.JSON)
 		if(questionarioenfermagem.save()){
-			render "Questionarioenfermagem Id:${questionarioenfermagem.id} - Salvo com sucesso!" 
-		}else{render "Erro: Questionarioenfermagem nao foi salvo!"}	    
+			render "Questionarioenfermagem Id:${questionarioenfermagem.id} - Salvo com sucesso!"
+		}else{render "Erro: Questionarioenfermagem nao foi salvo!"}
     }
 
      def buscar ={
-	     		
+
         def buscaSingular=""
         def buscaGeral=""
 
         if(params.nome==""){redirect(action:list)}
-	
+
 		if(params.nome)
 		{
-           
-            if (params.nome.isInteger()){
-                   buscaSingular = Questionarioenfermagem.findAllById(params.nome)
 
-                   println "Forca...:"+buscaSingular
+            if (params.nome.isInteger()){
+                buscaSingular = Questionarioenfermagem.findAllById(params.nome)
 
                 if(buscaSingular){
                 return [ questionarioenfermagemList: buscaSingular ]
                 }
                 else{
                     flash.message = "Questionario Enfermagem:${params.nome}, não cadastrado!"
-                    redirect(action:buscar)  
+                    redirect(action:buscar)
                 }
 		    }
             else{
                     flash.message = "Questionario Enfermagem:${params.nome} Digite id!"
-                    redirect(action:buscar)  
+                    redirect(action:buscar)
                 }
-        }    
-		else { 
+        }
+		else {
             if(params.nome!=null){
                 //if(!params.max) params.max = 10
                 buscaGeral = Questionarioenfermagem.findAll()
                 return [ questionarioenfermagemList: buscaGeral ]
             }
 		}
-    }    
+    }
 
-   
+
     def list = {
         if(!params.max) params.max = 10
         [ questionarioenfermagemList: Questionarioenfermagem.list( params ) ]
@@ -92,7 +90,7 @@ class QuestionarioenfermagemController {
         def questionarioenfermagem = Questionarioenfermagem.get( params.id )
 
         if(!questionarioenfermagem) {
-            flash.message = "Questionarioenfermagem n�o encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionarioenfermagem : questionarioenfermagem ] }
@@ -106,7 +104,7 @@ class QuestionarioenfermagemController {
             redirect(action:list)
         }
         else {
-            flash.message = "Questionarioenfermagem n�o encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -115,7 +113,7 @@ class QuestionarioenfermagemController {
         def questionarioenfermagem = Questionarioenfermagem.get( params.id )
 
         if(!questionarioenfermagem) {
-            flash.message = "Questionarioenfermagem n�o encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -136,13 +134,13 @@ class QuestionarioenfermagemController {
             }
         }
         else {
-            flash.message = "Questionarioenfermagem n�o encontrado id ${params.id}"
+            flash.message = "Questionarioenfermagem não encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }
 
     def create = {
-        def questionarioenfermagem = new Questionarioenfermagem()
+        def questionarioenfermagem = new Questionarioenfermagem([paciente:Paciente.get(params.id)])
         questionarioenfermagem.properties = params
         return ['questionarioenfermagem':questionarioenfermagem]
     }

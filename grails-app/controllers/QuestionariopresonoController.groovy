@@ -54,7 +54,7 @@ class QuestionariopresonoController {
         def questionariopresono = Questionariopresono.get( params.id )
 
         if(!questionariopresono) {
-            flash.message = "Questionariopresono n�o encontrado id ${params.id}"
+            flash.message = "Questionariopresono não encontrado id ${params.id}"
             redirect(action:list)
         }
         else { return [ questionariopresono : questionariopresono ] }
@@ -68,7 +68,7 @@ class QuestionariopresonoController {
             redirect(action:list)
         }
         else {
-            flash.message = "Questionariopresono n�o encontrado id ${params.id}"
+            flash.message = "Questionariopresono não encontrado id ${params.id}"
             redirect(action:list)
         }
     }
@@ -77,7 +77,7 @@ class QuestionariopresonoController {
         def questionariopresono = Questionariopresono.get( params.id )
 
         if(!questionariopresono) {
-            flash.message = "Questionariopresono n�o encontrado id ${params.id}"
+            flash.message = "Questionariopresono não encontrado id ${params.id}"
             redirect(action:list)
         }
         else {
@@ -98,13 +98,13 @@ class QuestionariopresonoController {
             }
         }
         else {
-            flash.message = "Questionariopresono n�o encontrado id ${params.id}"
+            flash.message = "Questionariopresono não encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }
 
     def create = {
-        def questionariopresono = new Questionariopresono()
+        def questionariopresono = new Questionariopresono([paciente:Paciente.get(params.id)])
         questionariopresono.properties = params
         return ['questionariopresono':questionariopresono]
     }

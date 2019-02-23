@@ -67,14 +67,14 @@
                                                     <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
                                                 </select>
 
-                                                <select class="icons" name="tempoEsperaExameResultado" id="tempoEsperaExameResultado" >
+                                                <!--<select class="icons" name="tempoEsperaExameResultado" id="tempoEsperaExameResultado" >
                                                     <option value="${pesquisasatisfacao?.tempoEsperaExameResultado}"><b>${pesquisasatisfacao?.tempoEsperaExameResultado}</b></option>
                                                     <option value="Detestei - 1" data-icon="../images/pesquisa/star1.png" class="left">Detestei - 1</option>
                                                     <option value="Nao Gostei - 2" data-icon="../images/pesquisa/star2.png" class="left">Não Gostei - 2</option>
                                                     <option value="Indiferente - 3" data-icon="../images/pesquisa/star3.png" class="left">Indiferente - 3</option>
                                                     <option value="Gostei - 4" data-icon="../images/pesquisa/star4.png" class="left">Gostei - 4</option>
                                                     <option value="Adorei - 5" data-icon="../images/pesquisa/star5.png" class="left">Adorei - 5</option>
-                                                </select>
+                                                </select>-->
                                         </p></div>
                                     </li>
                                     <li>

@@ -126,7 +126,7 @@ class PacienteController {
             }
         }
         else {
-            flash.message = "Paciente n�o encontrado id ${params.id}"
+            flash.message = "Paciente não encontrado id ${params.id}"
             redirect(action:edit,id:params.id)
         }
     }

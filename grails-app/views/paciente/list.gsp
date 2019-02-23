@@ -80,11 +80,11 @@
 							<ul id = "dropdown" class = "dropdown-content">
 								<li><a href = "/teste/questionariovideoeeg2/create/${paciente.id}">Questionário Vídeo EEG</a></li>
 								<li class = "divider"></li>
-								<li><a href = "#!">Questionário Enfermagem</a></li>
+								<li><a href = "/teste/questionarioenfermagem/create/${paciente.id}">Questionário Enfermagem</a></li>
 								<li class = "divider"></li>
-								<li><a href = "#!">Questionário Pré-Sono</a></li>
+								<li><a href = "/teste/questionariopresono/create/${paciente.id}">Questionário Pré-Sono</a></li>
 								<li class = "divider"></li>
-								<li><a href = "#">Questionário Pós-Sono</a></li>
+								<li><a href = "/teste/questionariopossono/create/${paciente.id}">Questionário Pós-Sono</a></li>
 								<li class = "divider"></li>
 								<li><a href = "#">Sair</a><i class = "glyphicon glyphicon-cloud tiny"></i></li>
 							</ul>

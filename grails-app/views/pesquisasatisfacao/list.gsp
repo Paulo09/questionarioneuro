@@ -68,7 +68,7 @@
 
                             <td><g:link action="show" id="${pesquisasatisfacao.id}">${fieldValue(bean:pesquisasatisfacao, field:'tempoEsperaEsperaExamesRealizados')}</g:link></td>
 
-                            <td><g:link action="show" id="${pesquisasatisfacao.id}">${fieldValue(bean:pesquisasatisfacao, field:'tempoEsperaExameResultado')}</g:link></td>
+                            <!--<td><g:link action="show" id="${pesquisasatisfacao.id}">${fieldValue(bean:pesquisasatisfacao, field:'tempoEsperaExameResultado')}</g:link></td>-->
 
                             <td><g:link action="show" id="${pesquisasatisfacao.id}">${fieldValue(bean:pesquisasatisfacao, field:'facilidadedeMarcarConsultaAtendido')}</g:link></td>
 

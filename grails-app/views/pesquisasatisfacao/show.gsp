@@ -63,12 +63,12 @@
 
                         </tr>
 
-                        <tr class="prop">
+                        <!--<tr class="prop">
                             <td valign="top" class="name"><b>Tempo Espera Exame Resultado:</td>
 
                             <td valign="top" class="value">${fieldValue(bean:pesquisasatisfacao, field:'tempoEsperaExameResultado')}</td>
 
-                        </tr>
+                        </tr>-->
 
                         <tr class="prop">
                             <td valign="top" class="name"><b>Facilidadede Marcar Consulta Atendido:</td>

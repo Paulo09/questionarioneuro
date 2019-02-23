@@ -9,7 +9,7 @@ String sexo
 String dataNascimento
 String observacao
 
-  static hasMany = [questionarioenfermagem:Questionarioenfermagem,questionariopresono:Questionariopresono]
+  static hasMany = [questionarioenfermagem:Questionarioenfermagem,questionariopresono:Questionariopresono,questionariovideoeeg2:Questionariovideoeeg2,questionariopossono:Questionariopossono]
 
 
 	String toString() {

@@ -104,7 +104,7 @@
 			  <i class="material-icons prefix">search</i>
 			  <input type="text" id="link" class="autocomplete">
 			  <label for="autocomplete-input">Buscar</label>
-			  <img align="right" src="https://chart.googleapis.com/chart?chs=150x200&cht=qr&chl=http://192.168.1.89:8080/teste/android/neuro.apk" title="Download: App Android"><li>App 1.0</li>
+			  <img align="right" src="https://chart.googleapis.com/chart?chs=150x200&cht=qr&chl=http://192.168.1.89:8080/teste/android/neuro.apk" title="Download: App Android"><li>V 1.20</li>
 			</div>
 		</div>
 	</ul>
@@ -138,6 +138,18 @@
 					</div>
 				</a>
 
+					<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopresono.jpg);" >
+				<a href="/teste/questionariopresono">
+				</div>
+					<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--white-1200" >
+							<div>
+							<strong><b>Questionário Video - Pré-Sono</b></strong>
+							</div>
+						</div>
+					</div>
+				</a>
+
 				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopossono.jpg);" >
 				<a href="/teste/questionariopossono">
@@ -150,18 +162,6 @@
 					</div>
 				</a>
 
-				<div class="red lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
-				<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/questionariopresono.jpg);" >
-				<a href="/teste/questionariopresono">
-				</div>
-					<div class="mdl-card__supporting-text white-text meta meta--fill mdl-color-text--white-1200" >
-							<div>
-							<strong><b>Questionário Video - Pré-Sono</b></strong>
-							</div>
-						</div>
-					</div>
-				</a>
-				
 		  <div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/pesquisaSatisfacao.jpg);" >
 			<a href="/teste/pesquisasatisfacao/list">
@@ -174,7 +174,7 @@
 				</div>
 			</a>
 
-			<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
+			<!--<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/exame.jpg);" >
 			<a href="/teste/exame">
 			</div>
@@ -184,7 +184,7 @@
 					  </div>
 					</div>
 				</div>
-			</a>
+			</a>-->
 
 			<div class="teal lighten-2 mdl-card something-else mdl-cell mdl-cell--4-col mdl-cell--4-col-desktop z-depth-5" >
 			<div class="mdl-card__media2" style="background-image:url(../images/menu/classes/quarto.jpg);" >

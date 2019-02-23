@@ -12,8 +12,11 @@ class Questionariopossono {
     String tomouMedicacaoDormirExameCampo
     String comentario
 
+    static belongsTo = Paciente
+    Paciente paciente
 
-    static constraints ={	
+
+    static constraints ={
 	    quantoTempodemorouDormir(inList:['0 a 30 minutos','30 minutos a 1 Hora','Mais de 1 Hora'])
         finalExameComoAcordou(inList:['Espontaneamnete','Foi cordado(a) pelo técnico(a)'])
         comoAcordouFinalExame(inList:['Relaxado(a)','Cansado(a)','Com sono'])
